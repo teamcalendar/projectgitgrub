@@ -1,0 +1,12 @@
+#chef-select {
+    display: flex;
+    justify-content: space-around;
+}
+#male {
+    width: 200px;
+    height: 200px;
+}
+#female {
+    width: 200px;
+    height: 200px;
+}
