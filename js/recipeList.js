@@ -53,6 +53,3 @@ const omelet = new Recipe('Omelet', [new Egg(10), new Ham(9), new Cheese(8), new
 const breakfast = [omelet];
 const lunch = [];
 const dinner = [];
-
-console.log(breakfast);
-console.log('Get Ham Points (expecting 9):', breakfast[0].ingredients[1].pointValue);
