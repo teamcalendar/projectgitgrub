@@ -1,0 +1,10 @@
+h1 {
+    text-align: center;
+    color: red;
+}
+
+.credits {
+    font-size: -1;
+    font-style: italic;
+    text-align: center;
+}
