@@ -1,7 +1,9 @@
-
-h1 {
+body {
     text-align: center;
-    color: red;
+}
+
+ul {
+    list-style: none;
 }
 
 .credits {
