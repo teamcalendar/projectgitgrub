@@ -1,0 +1,62 @@
+* {
+    height: 100%;
+}
+.header {
+    height: 3%;
+}
+.top-game-window {
+    display: flex;
+    flex-direction: row;
+    height: 60%;
+
+}
+.selected-user-image {
+    display: flex;
+    flex-grow: 1;
+    background: blue;
+}
+.data-window {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+.score-window {
+    display: flex;
+    flex-grow: 1;
+    background: rgb(65, 142, 230);
+
+}
+.recipe-window {
+    display: flex;
+    flex-grow: 1;
+    background: rgb(39, 87, 141);
+}
+.next-round-window {
+    display: flex;
+    flex-grow: 1;
+    background: rgb(22, 51, 85);
+}
+.judge-image {
+    display: flex;
+    flex-grow: 1;
+    background: blue;
+}
+.bottom-game-window {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+.food-image-row-1 {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+
+}
+.food-image-row-2 {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+.footer {
+    height: 3%;
+}
