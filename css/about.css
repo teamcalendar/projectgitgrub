@@ -1,0 +1,15 @@
+#about-title {
+    align-content: center;
+    font-family: 'Bevan', cursive;
+}
+
+.dev-picture {
+    border:2px solid black;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.dev-box {
+    background: rgb(206, 206, 206);
+}
