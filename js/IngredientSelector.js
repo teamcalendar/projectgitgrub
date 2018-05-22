@@ -20,6 +20,7 @@ class IngredientSelectorDisplay {
         //Calculate how many more "dummy" ingredients are needed
         //Randomly select enough "dummy" ingredients and add them into arrayOf10Ingredients
         //Shuffle arrayOf10Ingredients
+        const arrayOf10Ingredients = [new Egg(10), new Egg(9), new Egg(8), new Egg(7), new Egg(6), new Egg(5), new Egg(4), new Egg(3), new Egg(2), new Egg(1)];
 
         
         const ingredientSelectorSection = dom.getElementById('ingredient');
