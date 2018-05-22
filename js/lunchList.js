@@ -3,32 +3,25 @@
 'use strict';
 
 
+
 // Ingredient Construction
-class Egg {
+class Beef {
     constructor(pointValue) {
-        this.image = 'egg.jpg';
+        this.image = 'beef.jpg';
         this.pointValue = pointValue;
     }
 }
 
-class Ham {
+class Fish {
     constructor(pointValue) {
-        this.image = 'ham.jpg';
+        this.image = 'fish.jpg';
         this.pointValue = pointValue;
     }
 }
 
-class Bacon {
+class Chicken {
     constructor(pointValue) {
-        this.image = 'bacon.jpg';
-        this.pointValue = pointValue;
-    }
-}
-
-
-class Sausage {
-    constructor(pointValue) {
-        this.image = 'sausage.jpg';
+        this.image = 'chicken.jpg';
         this.pointValue = pointValue;
     }
 }
@@ -40,10 +33,16 @@ class Bread {
     }
 }
 
-
-class Cheese {
+class Bulgar {
     constructor(pointValue) {
-        this.image = 'cheese.jpg';
+        this.image = 'bulgar.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Mayonaise {
+    constructor(pointValue) {
+        this.image = 'mayonaise.jpg';
         this.pointValue = pointValue;
     }
 }
@@ -55,16 +54,66 @@ class Tomatoes {
     }
 }
 
-class Mushrooms {
+class Potatoes {
     constructor(pointValue) {
-        this.image = 'mushrooms.jpg';
+        this.image = 'potatoes.jpg';
         this.pointValue = pointValue;
     }
 }
 
-class BellPepper {
+class Lettuce {
     constructor(pointValue) {
-        this.image = 'bellPepper.jpg';
+        this.image = 'lettuce.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Cilantro {
+    constructor(pointValue) {
+        this.image = 'cilantro.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Mint {
+    constructor(pointValue) {
+        this.image = 'mint.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Parsley {
+    constructor(pointValue) {
+        this.image = 'Parsley.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Lemon {
+    constructor(pointValue) {
+        this.image = 'lemon.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Lime {
+    constructor(pointValue) {
+        this.image = 'Lime.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+
+class Peas {
+    constructor(pointValue) {
+        this.image = 'peas.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Onion {
+    constructor(pointValue) {
+        this.image = 'onion.jpg';
         this.pointValue = pointValue;
     }
 }
@@ -77,10 +126,43 @@ class Recipe {
     }
 }
 
-const omelet = new Recipe('Omelet', [new Egg(10), new Ham(9), new Cheese(8), new Mushrooms(5), new BellPepper(3)]);
-const 
+const tacos = new Recipe('Tacos',
+    [new Bread(10),
+        new Chicken(9),
+        new Lettuce(5),
+        new Cilantro(5),
+        new Onion(4)]);
+    
+const chishNFips = new Recipe('Chish N Fips',
+    [new Fish(10),
+        new Potatoes(10),
+        new Peas(8),
+        new Lemon(5),
+        new Mayonaise(5)]);
 
+const ceviche = new Recipe('Ceviche',
+    [new Fish(10),
+        new Lime(10),
+        new Onion(9),
+        new Tomatoes(9),
+        new Cilantro(7)
+    ]);
 
-const breakfast = [omelet];
-const lunch = [];
+const hamburger = new Recipe('Hamburger',
+    [new Beef(10),
+        new Bread(10),
+        new Tomatoes(8),
+        new Lettuce(7),
+        new Mayonaise(6)
+    ]);
+    
+const tabbouleh = new Recipe('Tabbouleh',
+    [new Parsley(10),
+        new Tomatoes(10),
+        new Mint(9),
+        new Onion(9),
+        new Bulgar(8)]);
+    
+const lunch = [tacos, chishNFips, ceviche, hamburger, tabbouleh];
 const dinner = [];
+    
