@@ -10,3 +10,4 @@ Project GitGrub was produced by Team Calendar as a week-four project for Alchemy
 ## Technical Notes
 
 ##Acknowledgements
+Menu and animated background code adapted from https://codepen.io/brandondward/pen/WjyBQW
