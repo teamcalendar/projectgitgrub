@@ -7,14 +7,14 @@
     margin: 40px auto;
 }
 
-.about-title {
+/* .about-title {
     content: attr(data-content);
-    /* text-align: center;
-    font-family: 'Bevan', cursive; */
-    /* position: relative;
+    text-align: center;
+    font-family: 'Bevan', cursive;
+    position: relative;
     display: inline-block;
-    color: black; */
-}
+    color: black;
+} */
 
 #bios {
     display: flex;
@@ -25,7 +25,13 @@
     
     margin: 10px;
 }
+/* .dev-namey {
+    margin: 7px;
+} */
 .dev-picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border:2px solid black;
     height: 200px;
     background-repeat: no-repeat;
@@ -39,4 +45,10 @@
 .dev-box {
     margin: 7px;
     background: rgb(206, 206, 206);
+}
+
+.connect {
+    display: block;
+    margin: 7px;
+    
 }
