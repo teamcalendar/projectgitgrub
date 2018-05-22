@@ -17,10 +17,40 @@ class Ham {
         this.pointValue = pointValue;
     }
 }
-    
+
+class Bacon {
+    constructor(pointValue) {
+        this.image = 'bacon.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+
+class Sausage {
+    constructor(pointValue) {
+        this.image = 'sausage.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Bread {
+    constructor(pointValue) {
+        this.image = 'bread.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+
 class Cheese {
     constructor(pointValue) {
         this.image = 'cheese.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Tomatoes {
+    constructor(pointValue) {
+        this.image = 'tomatoes.jpg';
         this.pointValue = pointValue;
     }
 }
@@ -48,6 +78,7 @@ class Recipe {
 }
 
 const omelet = new Recipe('Omelet', [new Egg(10), new Ham(9), new Cheese(8), new Mushrooms(5), new BellPepper(3)]);
+const 
 
 
 const breakfast = [omelet];
