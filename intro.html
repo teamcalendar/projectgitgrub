@@ -14,10 +14,17 @@
     <h1>Welcome to the Git.Grub Competition!</h1>
     <h2>Please Choose Your Character:</h2>
 
-    <div id="chef-select">
-        <img id="male" src="images/male.png">
-        <img id="female" src="images/female.png">
-    </div>
+   
+    <form id="chef-select">
+        <fieldset id="form-items">
+            <input type="radio" src="images/male.png" name="user-chef-male" class="user-chef-male" id="male"/>
+            <input type="radio" src="images/female.png" name="user-chef-female" class="user-chef-female" id="female"/>
+            <h3>Please Register Your Name:</h3>
+            <input type="text" name="username">
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+   
     
     <div id="instructions">
         <h2>Instructions:</h2>
@@ -26,12 +33,7 @@
         <p>Each item will contribute to your High Score, awarding more or less points depending on how well they fit the Judge's tastes.</p> 
         <p>Good Luck!</p>
     </div>
-    <div id="register-name">
-        <form>
-            <h3>Please Register Your Name:</h3>
-            <input type="text" name="username"><input type="submit" value="Submit">
-        </form>
-    </div>
+   
     <script src = "js/app.js"></script>
 </body>
 </html>
