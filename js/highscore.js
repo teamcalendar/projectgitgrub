@@ -33,7 +33,7 @@ var bubbleSort = function(highScoresArray, score) {
     }
     return highScoresArray;
 };
-highScoresArray =  bubbleSort(highScoresArray, score);
+highScoresArray = bubbleSort(highScoresArray, score);
 console.log(highScoresArray);
 
 // render array items to table
