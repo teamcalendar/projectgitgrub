@@ -22,7 +22,22 @@
     <a href="#" class="menu" ><i class="fa fa-bars" aria-hidden="true"></i></a>
     </div>
     <div class="title-container"><h1><span>Project GitGrub</span><br>Kitchen Showdown Hall of Fame</h1>
+        </div>
+
+        <div id = "HighScoreList"></div>
+<div id = "page-content">
+        <!-- Table with hard-coded data for styling purposes  -->
+  <table>
+      <thead><tr><th>Player Name</th><th>Score</th></tr></thead>
+      <tbody>
+      <tr><td>Jayne "Sue" Doe</td><td>900</td></tr>
+      <tr><td>John Smith</td><td>90</td></tr>
+  </tbody>
+  </table>
+  <!-- need a js function for clearing high scores -->
+     <button id = "clear-high-scores" onclick = "clearHighScoresArray();">Clear High Scores</button>
       <div class="circle"></div>
+    </div>
   </div>
   
   <svg version="1.1" id="svg-left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -56,18 +71,7 @@
 
   <!-- MENU CODE END  -->
 
-   <div id = "HighScoreList"></div>
-
-      <!-- Table with hard-coded data for styling purposes  -->
-<table>
-    <thead><tr><th>Player Name</th><th>Score</th></tr></thead>
-    <tbody>
-    <tr><td>Jayne "Sue" Doe</td><td>100</td></tr>
-    <tr><td>John Smith</td><td>90</td></tr>
-</tbody>
-</table>
-<!-- need a js function for clearing high scores -->
-   <button id = "clear-high-scores">Clear High Scores</button>
+   
 
     
     <script src = "js/highscore.js"></script>
