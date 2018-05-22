@@ -21,23 +21,28 @@ class IngredientSelectorDisplay {
 
         //Calculate how many more "dummy" ingredients are needed
         const remainingIngredients = 10 - arrayOf10Ingredients.length;
-        this.allIngredients = [new Cheese(0), new Bacon(0)];
-        console.log(this.allIngredients);
+        this.allIngredients = [new Cheese(0), new Bacon(0), new Egg(0), new Mushrooms(0), new BellPepper(0), new Ham(0), new Sausage(0), new Bread(0), new Beans(0), new ButternutSquash(0), new Potatoes(0), new Tomatoes(0)];
 
-        //Randomly select enough "dummy" ingredients and add them into arrayOf10Ingredients
-        for(let j = 0; j < remainingIngredients; j++) {
-            
+        //Randomly select enough unique "dummy" ingredients and add them into arrayOf10Ingredients
+        for(let j = 0; j < remainingIngredients;) {
             let index = getRandomInt(this.allIngredients.length);
-            console.log('Index: ', index);
             let dummyIngredient = this.allIngredients[index];
-            console.log('Dummy: ', dummyIngredient);
-            arrayOf10Ingredients.push(dummyIngredient);
+
+            // I don't know to use .includes comparing ingredients that are new objects, but same image except this workaround
+            let arrayOfIngredientNames = [];
+            for(let i in arrayOf10Ingredients) {
+                arrayOfIngredientNames.push(arrayOf10Ingredients[i].image);
+            }
+
+
+            if(arrayOfIngredientNames.includes(dummyIngredient.image) === false) {
+                arrayOf10Ingredients.push(dummyIngredient);
+                j++;
+            }
         }
 
 
-        //Shuffle arrayOf10Ingredients
-        console.log(arrayOf10Ingredients);
-
+        shuffleArray(arrayOf10Ingredients);
 
         const ingredientSelectorSection = dom.getElementById('ingredient');
         for(let i = 0; i < 10; i++) {
@@ -46,5 +51,14 @@ class IngredientSelectorDisplay {
         }
 
         return dom;
+    }
+}
+
+function shuffleArray(array) {
+    for(let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
 }
