@@ -1,8 +1,30 @@
-#about-title {
-    align-content: center;
-    font-family: 'Bevan', cursive;
+#about-body {
+    background-color: #6F8695;
 }
 
+#about-title-box {
+    max-width: 50%;  
+    margin: 40px auto;
+}
+
+.about-title {
+    content: attr(data-content);
+    /* text-align: center;
+    font-family: 'Bevan', cursive; */
+    /* position: relative;
+    display: inline-block;
+    color: black; */
+}
+
+#bios {
+    display: flex;
+    
+}
+
+.dev-name {
+    
+    margin: 10px;
+}
 .dev-picture {
     border:2px solid black;
     height: 200px;
@@ -10,6 +32,11 @@
     background-size: contain;
 }
 
+.dev-bio {
+    padding: .5em;
+}
+
 .dev-box {
+    margin: 7px;
     background: rgb(206, 206, 206);
 }
