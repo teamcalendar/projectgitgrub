@@ -1,15 +1,54 @@
-#about-title {
-    align-content: center;
-    font-family: 'Bevan', cursive;
+#about-body {
+    background-color: #6F8695;
 }
 
+#about-title-box {
+    max-width: 50%;  
+    margin: 40px auto;
+}
+
+/* .about-title {
+    content: attr(data-content);
+    text-align: center;
+    font-family: 'Bevan', cursive;
+    position: relative;
+    display: inline-block;
+    color: black;
+} */
+
+#bios {
+    display: flex;
+    
+}
+
+.dev-name {
+    
+    margin: 10px;
+}
+/* .dev-namey {
+    margin: 7px;
+} */
 .dev-picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border:2px solid black;
     height: 200px;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
+.dev-bio {
+    padding: .5em;
+}
+
 .dev-box {
+    margin: 7px;
     background: rgb(206, 206, 206);
+}
+
+.connect {
+    display: block;
+    margin: 7px;
+    
 }

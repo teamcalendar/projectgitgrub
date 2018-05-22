@@ -1,7 +1,18 @@
 
 h1 {
+    font-family: 'Londrina Solid', cursive;
+    font-weight: 900;
     text-align: center;
-    color: red;
+    
+}
+
+p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+
+}
+p strong {
+    font-weight: 700;
 }
 
 .credits {
