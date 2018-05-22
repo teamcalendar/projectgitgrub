@@ -41,6 +41,7 @@ console.log(highScoresArray);
 
 
 
+
 //reset high-scores function
 let clearHighScoresArray = function(){
     highScoresArray = 0;
