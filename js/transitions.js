@@ -3,6 +3,8 @@
 
 'use strict';
 
+let highScoreList = [];
+
 const transitionTemplate = document.getElementById('transition-template');
 
 class Transition {
@@ -11,10 +13,15 @@ class Transition {
         this.playerName = playerName;
         this.score = score;
     }
+    
 
     render() {
         const dom = transitionTemplate.content;
+
+        
         
         return dom;
     }
+
 }
+
