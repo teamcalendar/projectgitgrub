@@ -38,14 +38,17 @@ highScoresArray = bubbleSort(highScoresArray, this.score);
 console.log(highScoresArray);
 
 // render array items to table
-const parent = document.getElementsByTagName('tr');
+const parent = document.getElementsByTagName('tbody');
 
-const child1 = document.createElement('td');
-child1.textContent = highScoresArray.playerName;
-parent.appendChild(child1);
-const child2 = document.createElement('td');
-child1.textContent = highScoresArray.playerName;
-parent.appendChild(child2);
+for(var i = 0; i < highScoresArray.length; i++) {
+    document.createElement('tr');
+    let child1 = document.createElement('td');
+    child1.textContent = highScoresArray[i].playerName;
+    parent.appendChild(child1);
+    let child2 = document.createElement('td');
+    child1.textContent = highScoresArray[i].score;
+    parent.appendChild(child2);
+}
 
 //reset high-scores function
 let clearHighScoresArray = function(){
