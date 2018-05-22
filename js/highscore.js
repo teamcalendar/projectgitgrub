@@ -15,14 +15,14 @@ console.log('highScoresArray prior to sort: ', highScoresArray);
 
 // sort array on score (high to low)
 
-let score = 0;
+
 
 var bubbleSort = function(highScoresArray, score) {
     let swapped = true;
     while(swapped === true) {
         swapped = false;
         for(let i = 1; i < highScoresArray.length; i++) {
-            if(highScoresArray[i - 1][score] < highScoresArray[i][score]) {
+            if(highScoresArray[i - 1].score < highScoresArray[i].score) {
                 let temp;
                 temp = highScoresArray[i];
                 highScoresArray[i] = highScoresArray[i - 1];
@@ -33,10 +33,11 @@ var bubbleSort = function(highScoresArray, score) {
     }
     return highScoresArray;
 };
-highScoresArray = bubbleSort(highScoresArray, score);
+highScoresArray = bubbleSort(highScoresArray, this.score);
 console.log(highScoresArray);
 
 // render array items to table
+
 
 
 
