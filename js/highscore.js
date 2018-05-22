@@ -11,11 +11,30 @@ let highScoresArray = [
     { name: "Kenneth", score: 375 }
 ];
 
-console.log(highScoresArray);
+console.log('highScoresArray prior to sort: ', highScoresArray);
 
 // sort array on score (high to low)
-var highScore = Math.max.apply(Math, highScoresArray);
-console.log('the highest score in the array is: ' + highScore);
+
+let score = 0;
+
+var bubbleSort = function(highScoresArray, score) {
+    let swapped = true;
+    while(swapped === true) {
+        swapped = false;
+        for(let i = 1; i < highScoresArray.length; i++) {
+            if(highScoresArray[i - 1][score] < highScoresArray[i][score]) {
+                let temp;
+                temp = highScoresArray[i];
+                highScoresArray[i] = highScoresArray[i - 1];
+                highScoresArray[i - 1] = temp;
+                swapped = true;
+            }
+        }
+    }
+    return highScoresArray;
+};
+highScoresArray =  bubbleSort(highScoresArray, score);
+console.log(highScoresArray);
 
 // render array items to table
 
