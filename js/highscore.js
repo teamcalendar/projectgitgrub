@@ -33,15 +33,19 @@ var bubbleSort = function(highScoresArray, score) {
     }
     return highScoresArray;
 };
+
 highScoresArray = bubbleSort(highScoresArray, this.score);
 console.log(highScoresArray);
 
 // render array items to table
+const parent = document.getElementsByTagName('tr');
 
-
-
-
-
+const child1 = document.createElement('td');
+child1.textContent = highScoresArray.playerName;
+parent.appendChild(child1);
+const child2 = document.createElement('td');
+child1.textContent = highScoresArray.playerName;
+parent.appendChild(child2);
 
 //reset high-scores function
 let clearHighScoresArray = function(){
