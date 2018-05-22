@@ -15,26 +15,12 @@
     flex-grow: 1;
     background: blue;
 }
-.data-window {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 2;
-}
+
 .score-window {
     display: flex;
     flex-grow: 1;
     background: rgb(65, 142, 230);
 
-}
-.recipe-window {
-    display: flex;
-    flex-grow: 1;
-    background: rgb(39, 87, 141);
-}
-.next-round-window {
-    display: flex;
-    flex-grow: 1;
-    background: rgb(22, 51, 85);
 }
 .judge-image {
     display: flex;

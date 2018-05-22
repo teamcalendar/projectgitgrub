@@ -9,53 +9,81 @@
     <title>Project GitGrub Working File</title>
 </head>
 <body>
+    
+    
     <section class="header">
-   <h1>header here</h1>
+        <h1>header here</h1>
     </section>
-
-    <section class="top-game-window">
-        <div class="selected-user-image">
-            user image
-        </div>
-        <div class="data-window">
-            <div class="score-window">
-                score
-            </div>
-            <div class="recipe-window">
-                recipe
-            </div>
-            <div class="next-round-window">
-                next round
-            </div>
-        </div>
-        <div class="judge-image">
-            judge image
-        </div>
-    </section>
-
-    <section class="bottom-game-window">
-        <div class="food-image-row-1">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-        </div>
-        <div class="food-image-row-2">
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-        </div>
-    </section>
-
+    
+    <div id="root"></div>
+    
     <section class="footer">
-            <h1>footer here</h1>
+        <h1>footer here</h1>
     </section>
 
+    <template id="app-template">
+        <h1>Project GitGrub</h1>
+            <section class="top-game-window">
+                <div id="player-display" class="selected-user-image">
+                user image
+                </div>
+    
+                <div id="score-display" class="score-window">
+                    score
+                </div>
+    
+                <div id="judge-display" class="judge-image">
+                judge image
+                </div>
+            </section>
+            
+            <div id="round-display" class="next-round-window">
+            next round
+            </div>
+    </template>
 
-    <script src = "js/recipeList.js"></script>
-    <script src = "js/app.js"></script>
-</body>
+    <template id="player-display-template">
+        <div>
+            <h3>PLAYER</h3>
+            <img>
+        </div>
+    </template>
+    
+    <template id="judge-display-template">
+        <div>
+            <h3>JUDGE</h3>
+            <img>
+        </div>
+    </template>
+
+    <template id="round-display-template">
+        <button>Submit 🥘</button>
+        <div>
+            <p id="recipe-name"></p>
+        </div>
+        <section id="item-selector" class="bottom-game-window">
+
+        </section>
+    </template>
+
+    <template id="item-template">
+        <img>
+        <p>Ingredient</p>
+    </template>
+
+    <template id="score-display-template">
+        <div>
+            <h3>Score:</h3>
+            <h3>0</h3>
+        </div>
+    </template>
+        <script src = "js/recipeList.js"></script>
+        <script src = "js/ScoreDisplay.js"></script>
+        <script src = "js/Item.js"></script>
+        <script src = "js/RoundDisplay.js"></script>
+        <script src = "js/PlayerDisplay.js"></script>
+        <script src = "js/JudgeDisplay.js"></script>
+        <script src = "js/GameApp.js"></script>
+        <script src = "js/main.js"></script>
+    </body>
 </html>
