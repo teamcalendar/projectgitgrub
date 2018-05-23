@@ -10,7 +10,7 @@ class IngredientSelectorDisplay {
         this.recipe = recipe;
         this.allIngredients = breakfastIngredients;
         this.onSubmit = onSubmit;
-        this.score = 0;
+        this.roundScore = 0;
     }
 
     render() {
@@ -49,18 +49,19 @@ class IngredientSelectorDisplay {
         for(let i = 0; i < 10; i++) {
             const ingredientSelectorComponent = new Ingredient(arrayOf10Ingredients[i], (ingredient, statusChange) => {
                 if(statusChange === true) {
+                    this.roundScore += ingredient.pointValue;
                     console.log(ingredient.constructor.name, 'is selected');
+                } else {
+                    this.roundScore -= ingredient.pointValue;
                 }
-                
-                this.score += ingredient.pointValue;
-                console.log(this.score);
+                console.log(this.roundScore);
             });
             ingredientSelectorSection.appendChild(ingredientSelectorComponent.render());
         }
         const submitButton = dom.querySelector('button');
         submitButton.addEventListener('click', () => {
             // event.preventDefault;
-            this.onSubmit(this.score);
+            this.onSubmit(this.roundScore);
         });
         return dom;
     }

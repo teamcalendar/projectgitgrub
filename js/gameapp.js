@@ -20,6 +20,12 @@ class GameApp {
 
     }
 
+    nextRound() {
+        //this.transitionComponent.clearTransitionMessage();
+        this.roundNumber ++;
+        this.roundDisplayComponent.update(this.roundNumber);
+    }
+
     render() {
         const dom = appTemplate.content;
 
@@ -31,30 +37,32 @@ class GameApp {
         const judgeDisplayComponent = new JudgeDisplay(this.score);
         judgeDisplaySection.appendChild(judgeDisplayComponent.render());
 
+        const transitionSection = dom.getElementById('transition');
+
         const roundDisplaySection = dom.getElementById('round-display');
-        const roundDisplayComponent = new RoundDisplay(this.roundNumber, this.score, this.playerName, (score) => {
-            this.score += score;
+        this.roundDisplayComponent = new RoundDisplay(this.roundNumber, this.score, this.playerName, (roundScore) => {
+            this.score += roundScore;
 
             //update score display
 
-            this.roundNumber++;
-
-            //trigger a transition
-
-            roundDisplayComponent.update(this.roundNumber);
-            
             // update judge display based on score
 
+            //trigger a transition
+            console.log(transitionSection);
+            this.transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
+            transitionSection.appendChild(this.transitionComponent.render());
+
+            window.setTimeout(this.nextRound, 3000);
+            
+
         });
-        roundDisplaySection.appendChild(roundDisplayComponent.render());
+        roundDisplaySection.appendChild(this.roundDisplayComponent.render());
         
         const scoreDisplaySection = dom.getElementById('score-display');
         const scoreDisplayComponent = new ScoreDisplay(this.score);
         scoreDisplaySection.appendChild(scoreDisplayComponent.render());
         
-        const transitionSection = dom.getElementById('transition');
-        const transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
-        transitionSection.appendChild(transitionComponent.render());
+        
         
         return dom;
     }
