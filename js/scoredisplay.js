@@ -11,11 +11,11 @@ class ScoreDisplay {
     }
     update(score){
         this.score = score;
-        console.log('score is', this.score);
+        console.log('updating score to', this.score);
         this.scoreUpdateLocation.textContent = this.score;
     }
     render() {
-        const dom = scoreDisplayTemplate.content.cloneNode(true);
+        const dom = scoreDisplayTemplate.content;
         this.scoreUpdateLocation = dom.querySelector('h2');
         this.scoreUpdateLocation.textContent = this.score;
         return dom;
