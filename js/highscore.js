@@ -55,5 +55,6 @@ for(var i = 0; i < highScoresArray.length; i++) {
 
 //reset high-scores function
 let clearHighScoresArray = function(){
-    highScoresArray = 0;
+    selectTableBody.remove();
+    // highScoresArray = 0;
 };
