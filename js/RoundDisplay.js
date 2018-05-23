@@ -1,5 +1,5 @@
 /* exported RoundDisplay */
-/* globals IngredientSelectorDisplay, Transition, breakfast */
+/* globals IngredientSelectorDisplay, breakfast */
 
 'use strict';
 
@@ -28,10 +28,6 @@ class RoundDisplay {
         const itemSelectorSection = dom.getElementById('ingredient-selector');
         const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);
         itemSelectorSection.appendChild(itemSelectorComponent.render());
-
-        const transitionSection = dom.getElementById('transition');
-        const transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
-        transitionSection.appendChild(transitionComponent.render());
 
         return dom;
     }
