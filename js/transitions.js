@@ -1,5 +1,4 @@
 /* exported highScoreList Transition */
-/* globals roundNumber */
 
 'use strict';
 
