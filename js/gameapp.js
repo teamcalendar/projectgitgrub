@@ -20,6 +20,12 @@ class GameApp {
 
     }
 
+    nextRound() {
+        //this.transitionComponent.clearTransitionMessage();
+        this.roundNumber ++;
+        this.roundDisplayComponent.update(this.roundNumber);
+    }
+
     render() {
         const dom = appTemplate.content;
 
@@ -34,25 +40,23 @@ class GameApp {
         const transitionSection = dom.getElementById('transition');
 
         const roundDisplaySection = dom.getElementById('round-display');
-        const roundDisplayComponent = new RoundDisplay(this.roundNumber, this.score, this.playerName, (roundScore) => {
+        this.roundDisplayComponent = new RoundDisplay(this.roundNumber, this.score, this.playerName, (roundScore) => {
             this.score += roundScore;
 
             //update score display
 
-            this.roundNumber++;
+            // update judge display based on score
 
             //trigger a transition
             console.log(transitionSection);
-            const transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
-            transitionSection.appendChild(transitionComponent.render());
+            this.transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
+            transitionSection.appendChild(this.transitionComponent.render());
 
-
-            roundDisplayComponent.update(this.roundNumber);
+            window.setTimeout(this.nextRound, 3000);
             
-            // update judge display based on score
 
         });
-        roundDisplaySection.appendChild(roundDisplayComponent.render());
+        roundDisplaySection.appendChild(this.roundDisplayComponent.render());
         
         const scoreDisplaySection = dom.getElementById('score-display');
         const scoreDisplayComponent = new ScoreDisplay(this.score);
