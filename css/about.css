@@ -1,10 +1,15 @@
 #about-body {
+    display: block;
     background-color: #6F8695;
+    box-sizing: border-box;
 }
 
 #about-title-box {
+    display: block;
     max-width: 50%;  
     margin: 40px auto;
+    box-sizing: border-box;
+    
 }
 
 /* .about-title {
@@ -17,38 +22,58 @@
 } */
 
 #bios {
+    display: block;
     display: flex;
+    box-sizing: border-box;
     
 }
 
-.dev-name {
-    
-    margin: 10px;
+.dev-whole {
+    display: block;
+    box-sizing: border-box;
 }
-/* .dev-namey {
+
+.dev-name {
+    display: block;
     margin: 7px;
-} */
+    box-sizing: border-box;
+    
+}
+.dev-namey {
+    display: block;
+    margin: 7px;
+    box-sizing: border-box;
+    
+}
 .dev-picture {
     display: block;
     margin-left: auto;
     margin-right: auto;
     border:2px solid black;
-    height: 200px;
+    width:  150px;
+    height: 180px;
     background-repeat: no-repeat;
     background-size: contain;
+    box-sizing: border-box;
+    
 }
 
 .dev-bio {
+    display: block;
     padding: .5em;
+    box-sizing: border-box;
+    
 }
 
 .dev-box {
+    display: block;
     margin: 7px;
     background: rgb(206, 206, 206);
+    box-sizing: border-box;
 }
 
 .connect {
     display: block;
     margin: 7px;
-    
+    box-sizing: border-box;
 }

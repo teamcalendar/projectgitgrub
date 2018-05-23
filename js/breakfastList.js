@@ -91,7 +91,6 @@ class Lemon {
     }
 }
 
-
 //Recipe Construction 
 class Recipe {
     constructor(name, ingredients) {
