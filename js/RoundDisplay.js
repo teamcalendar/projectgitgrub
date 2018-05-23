@@ -6,19 +6,27 @@
 const roundDisplayTemplate = document.getElementById('round-display-template');
 
 class RoundDisplay {
-    constructor(roundNumber, score, playerName) {
+    constructor(roundNumber, score, playerName, onSubmit) {
         this.recipeList = breakfast;
         this.roundNumber = roundNumber;
         this.score = score;
         this.playerName = playerName;
+        this.onSubmit = onSubmit;
     }
+
+    update(roundNumber){
+        console.log('welcome to round', roundNumber);
+
+        
+    }
+
 
     render() {
         const dom = roundDisplayTemplate.content;
         const recipe = pickRandomRecipe(this.recipeList);
 
         const itemSelectorSection = dom.getElementById('ingredient-selector');
-        const itemSelectorComponent = new IngredientSelectorDisplay(recipe);
+        const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);
         itemSelectorSection.appendChild(itemSelectorComponent.render());
 
         const transitionSection = dom.getElementById('transition');
@@ -29,7 +37,6 @@ class RoundDisplay {
     }
 }
 
-//returns a random number
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
