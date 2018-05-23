@@ -2,12 +2,19 @@
 /* globals */
 
 'use strict';
+const userArray = window.localStorage.getItem('userData');
 
 const playerDisplayTemplate = document.getElementById('player-display-template');
 
+const userArrayParse = JSON.parse(userArray);
+
+const chefImage = userArrayParse[0];
+
+console.log('user image:', chefImage);
+
 class PlayerDisplay {
-    constructor(chefSelect, userName) {
-        this.chefSelect = chefSelect;
+    constructor(userName) {
+        this.chefSelect = chefImage;
         this.userName = userName;
     }
 
