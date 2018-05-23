@@ -1,7 +1,5 @@
-/* globals */
-/* exported breakfast, lunch, dinner */
+/* exported lunch, lunchIngredients */
 'use strict';
-
 
 
 // Ingredient Construction
@@ -40,9 +38,9 @@ class Bulgar {
     }
 }
 
-class Mayonaise {
+class Mayonnaise {
     constructor(pointValue) {
-        this.image = 'mayonaise.jpg';
+        this.image = 'mayonnaise.jpg';
         this.pointValue = pointValue;
     }
 }
@@ -118,6 +116,8 @@ class Onion {
     }
 }
 
+
+
 //Recipe Construction 
 class Recipe {
     constructor(name, ingredients) {
@@ -131,14 +131,16 @@ const tacos = new Recipe('Tacos',
         new Chicken(9),
         new Lettuce(5),
         new Cilantro(5),
-        new Onion(4)]);
+        new Onion(4)
+    ]);
     
-const chishNFips = new Recipe('Chish N Fips',
-    [new Fish(10),
-        new Potatoes(10),
-        new Peas(8),
-        new Lemon(5),
-        new Mayonaise(5)]);
+const salad = new Recipe('Salad',
+    [new Lettuce(10),
+        new Tomatoes(10),
+        new Mint(50),
+        new Chicken(5),
+        new Bread(5)
+    ]);
 
 const ceviche = new Recipe('Ceviche',
     [new Fish(10),
@@ -153,7 +155,7 @@ const hamburger = new Recipe('Hamburger',
         new Bread(10),
         new Tomatoes(8),
         new Lettuce(7),
-        new Mayonaise(6)
+        new Mayonnaise(6)
     ]);
     
 const tabbouleh = new Recipe('Tabbouleh',
@@ -163,8 +165,8 @@ const tabbouleh = new Recipe('Tabbouleh',
         new Onion(9),
         new Bulgar(8)]);
     
-const lunch = [tacos, chishNFips, ceviche, hamburger, tabbouleh];
-const lunchIngredients = [new Beef(0), new Fish(0), new Chicken(0), new Bread(0), new Bulgar(0), new Mayonaise(0), new Tomatoes,
+const lunch = [tacos, salad, ceviche, hamburger, tabbouleh];
+const lunchIngredients = [new Beef(0), new Fish(0), new Chicken(0), new Bread(0), new Bulgar(0), new Mayonnaise(0), new Tomatoes,
     new Potatoes(0), new Lettuce(0), new Cilantro(0), new Mint(0), new Parsley(0), new Lemon(0), new Lime(0), new Peas(0), new Onion(0)];
 
     

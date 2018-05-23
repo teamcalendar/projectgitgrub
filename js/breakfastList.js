@@ -1,5 +1,4 @@
-/* globals */
-/* exported breakfast, lunch, dinner */
+/* exported breakfast, breakfastIngredients */
 'use strict';
 
 
@@ -91,6 +90,20 @@ class Lemon {
     }
 }
 
+class Tortilla {
+    constructor(pointValue) {
+        this.image = 'tortilla.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Avocado {
+    constructor(pointValue) {
+        this.image = 'avocado.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
 //Recipe Construction 
 class Recipe {
     constructor(name, ingredients) {
@@ -141,8 +154,22 @@ const hash = new Recipe('Hash',
 
 const breakfast = [omelet, fullEnglish, benedict, breakfastBurrito, hash];
 
-const breakfastIngredients = [new Egg(0), new Ham(0), new Bacon(0), new Sausage(0), new Bread(0), new Cheese(0),
-    new Tomatoes(0), new Potatoes(0), new ButternutSquash(0), new Beans(0), new Mushrooms(0), new Lemon(0)];
+const breakfastIngredients = [
+    new Egg(0),
+    new Ham(0),
+    new Bacon(0),
+    new Sausage(0),
+    new Bread(0),
+    new Cheese(0),
+    new Tomatoes(0),
+    new Potatoes(0),
+    new ButternutSquash(0),
+    new Beans(0),
+    new Mushrooms(0),
+    new Lemon(0),
+    new Tortilla(0),
+    new Avocado(0)
+];
 
 
 
