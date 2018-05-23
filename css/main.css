@@ -7,8 +7,11 @@ body {
 
 
 h1 {
+    
+    font-size: 5em;
     font-family: 'Londrina Solid', cursive;
     font-weight: 900;
+    color: rgb(216, 57, 113);
     text-align: center;
     
 }
@@ -33,6 +36,8 @@ h2 {
 p {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
+    color: white;
+    text-align: center;
 
 }
 p strong {
