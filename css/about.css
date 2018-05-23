@@ -1,20 +1,9 @@
-#about-body {
-    background-color: #6F8695;
-}
+
 
 #about-title-box {
     max-width: 50%;  
-    margin: 40px auto;
+    margin: 10px auto;
 }
-
-/* .about-title {
-    content: attr(data-content);
-    text-align: center;
-    font-family: 'Bevan', cursive;
-    position: relative;
-    display: inline-block;
-    color: black;
-} */
 
 #bios {
     display: flex;
@@ -25,9 +14,11 @@
     
     margin: 10px;
 }
-/* .dev-namey {
-    margin: 7px;
-} */
+
+h2 {
+    -webkit-margin-after: 0px;
+}
+
 .dev-picture {
     display: block;
     margin-left: auto;
@@ -44,7 +35,8 @@
 
 .dev-box {
     margin: 7px;
-    background: rgb(206, 206, 206);
+    padding: 20px 10px 10px 10px;
+    background: rgb(82, 161, 182);
 }
 
 .connect {
