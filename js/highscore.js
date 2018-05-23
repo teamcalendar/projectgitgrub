@@ -15,8 +15,6 @@ console.log('highScoresArray prior to sort: ', highScoresArray);
 
 // sort array on score (high to low)
 
-
-
 var bubbleSort = function(highScoresArray, score) {
     let swapped = true;
     while(swapped === true) {
