@@ -55,12 +55,11 @@ class GameApp {
         const roundDisplaySection = dom.getElementById('round-display');
         this.roundDisplayComponent = new RoundDisplay(this.roundNumber, this.score, this.playerName, (roundScore) => {
             this.score += roundScore;
-            console.log('score is', this.score);
-            this.roundDisplayComponent.update(this.score);
+            this.scoreDisplayComponent.update(this.score);
             // update judge display based on score
             
             //trigger a transition
-            console.log(transitionSection);
+            // console.log(transitionSection);
             this.transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
             transitionSection.appendChild(this.transitionComponent.render());
             
@@ -69,7 +68,7 @@ class GameApp {
                 if(this.roundNumber === 3){
                     window.location.href = 'hiscores.html';
                 }
-                this.roundNumber ++;
+                this.roundNumber++;
                 this.roundDisplayComponent.update(this.roundNumber);
             }, 3000);
         });
