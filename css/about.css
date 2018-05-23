@@ -1,44 +1,40 @@
 
 #about-body {
     display: block;
-    background-color: #6F8695;
-    box-sizing: border-box;
+    background-color: #6f8695;
+    
 }
-
 
 #about-title-box {
     display: block;
     max-width: 50%;  
-
     margin: 40px auto;
-    box-sizing: border-box;
 
 }
 
 #bios {
-    display: block;
     display: flex;
-    box-sizing: border-box;
-    
+    height: auto;
 }
 
 .dev-whole {
     display: block;
-    box-sizing: border-box;
+    
 }
 
 .dev-name {
     display: block;
     margin: 7px;
-    box-sizing: border-box;
     
 }
 
+#special {
+    font-stretch: ultra-condensed;
+}
 
 h2 {
     -webkit-margin-after: 0px;
 }
-
 
 .dev-picture {
     display: block;
@@ -47,16 +43,13 @@ h2 {
     border:2px solid black;
     width:  150px;
     height: 180px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    box-sizing: border-box;
     
 }
 
 .dev-bio {
     display: block;
-    padding: .5em;
-    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
@@ -65,15 +58,21 @@ h2 {
     margin: 7px;
 
     background: rgb(206, 206, 206);
-    box-sizing: border-box;
-
+    
     padding: 20px 10px 10px 10px;
     background: rgb(82, 161, 182);
 
+    height: 600px;
+    /* width: 280px; */
+}
+
+.para {
+    margin: 8px, 7px, 7px, 7px;
+    padding: 8px;
 }
 
 .connect {
     display: block;
     margin: 7px;
-    box-sizing: border-box;
+    
 }
