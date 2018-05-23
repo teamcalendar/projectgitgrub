@@ -6,9 +6,9 @@ console.log('highscore.js is loading properly');
 
 // bring in the player name and scores array
 let highScoresArray = [
-    { name: "John", score: 125 },
-    { name: "Kathy", score: 500 },
-    { name: "Kenneth", score: 375 }
+    { playerName: "John", score: 125 },
+    { playerName: "Kathy", score: 500 },
+    { playerName: "Kenneth", score: 375 }
 ];
 
 console.log('highScoresArray prior to sort: ', highScoresArray);
@@ -38,16 +38,19 @@ highScoresArray = bubbleSort(highScoresArray, this.score);
 console.log(highScoresArray);
 
 // render array items to table
-const parent = document.getElementsByTagName('tbody');
 
+let selectTableBody = document.getElementsByTagName('tbody')[0];
+console.log(selectTableBody);
 for(var i = 0; i < highScoresArray.length; i++) {
-    document.createElement('tr');
+    let tRow = document.createElement('tr');
+    selectTableBody.appendChild(tRow);
     let child1 = document.createElement('td');
     child1.textContent = highScoresArray[i].playerName;
-    parent.appendChild(child1);
+    tRow.appendChild(child1);
+
     let child2 = document.createElement('td');
-    child1.textContent = highScoresArray[i].score;
-    parent.appendChild(child2);
+    child2.textContent = highScoresArray[i].score;
+    tRow.appendChild(child2);
 }
 
 //reset high-scores function
