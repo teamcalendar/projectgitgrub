@@ -18,23 +18,23 @@ class JudgeDisplay {
         
         judgeImage.src = this.judgeState;
         
-        if(this.roundNumber === 2 && this.score < 50){
+        if(this.roundNumber === 2 && this.score < 80){
             this.judgeState = '/images/Judge-sad.png';
 
-        } else if(this.score < 100) {
+        } else if(this.score > 100) {
             this.judgeState = '/images/Judge-default.png';
 
-        } else if(this.score > 150) {
+        } else if(this.score > 120) {
             this.judgeState = '/images/Judge-happy.png';
         }
 
-        if(this.roundNumber === 3 && this.score < 200){
+        if(this.roundNumber === 3 && this.score < 160){
             this.judgeState = '/images/Judge-sad.png';
 
-        } else if(this.score < 250) {
+        } else if(this.score > 200) {
             this.judgeState = '/images/Judge-default.png';
 
-        } else if(this.score < 300) {
+        } else if(this.score > 240) {
             this.judgeState = '/images/Judge-happy.png';
         }
 
