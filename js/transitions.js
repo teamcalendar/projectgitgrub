@@ -10,7 +10,7 @@ let highScoreList = [];
 const transitionTemplate = document.getElementById('transition-template');
 
 class Transition {
-    constructor(roundNumber, playerName, score) {
+    constructor(roundNumber, score, playerName) {
         this.roundNumber = roundNumber;
         this.playerName = playerName;
         this.score = score;

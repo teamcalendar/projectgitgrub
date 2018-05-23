@@ -21,7 +21,8 @@ class GameApp {
     }
 
     nextRound() {
-        //this.transitionComponent.clearTransitionMessage();
+        console.log('3 seconds have passed', this.transitionComponent);
+        this.transitionComponent.clearTransitionMessage();
         this.roundNumber ++;
         this.roundDisplayComponent.update(this.roundNumber);
     }
@@ -38,7 +39,7 @@ class GameApp {
         judgeDisplaySection.appendChild(judgeDisplayComponent.render());
 
         const transitionSection = dom.getElementById('transition');
-
+        
         const roundDisplaySection = dom.getElementById('round-display');
         this.roundDisplayComponent = new RoundDisplay(this.roundNumber, this.score, this.playerName, (roundScore) => {
             this.score += roundScore;
@@ -52,9 +53,11 @@ class GameApp {
             this.transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
             transitionSection.appendChild(this.transitionComponent.render());
 
-            window.setTimeout(this.nextRound, 3000);
-            
-
+            window.setTimeout(() => {
+                this.transitionComponent.clearTransitionMessage();
+                this.roundNumber ++;
+                this.roundDisplayComponent.update(this.roundNumber);
+            }, 3000);
         });
         roundDisplaySection.appendChild(this.roundDisplayComponent.render());
         
@@ -67,4 +70,3 @@ class GameApp {
         return dom;
     }
 }
-
