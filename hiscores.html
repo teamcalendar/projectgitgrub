@@ -12,22 +12,31 @@
 </head>
 
 <body>
-      <h1>Project GitGrub</h1><h2>Kitchen Showdown Hall of Fame</h2>
+      <h1 class = "main-title">Project GitGrub</h1><h2>Kitchen Showdown Hall of Fame</h2>
 
 
         <!-- Table with hard-coded data for styling purposes  -->
 
-  <table id = "high-score-display-table">
+  <div class = "flex-grid">
+      <div class = "row">
+        <table id = "high-score-display-table">
       <thead><tr><th>Player Name</th><th>Score</th></tr></thead>
       <tbody>
       <tr><td>joe blow</td><td>500</td></tr>
     </tbody>
   </table>
+</div>
+</div>
  
   
      <button id = "clear-high-scores" onclick = "clearHighScoresArray();">Clear High Scores</button>
+     <div class = "nav-container">
+     <a href="intro.html" class = "index-button">Start New Game</a>
+        <a href="#" class = "index-button" onclick = "resumeGame();">Resume Game</a>
+        <a href="hiscores.html" class = "index-button">High Scores</a>
+        <a href="index.html" class = "index-button">Home</a>
+    </div>
       
-    
     <script src = "js/highscore.js"></script>
 </body>
 </html>

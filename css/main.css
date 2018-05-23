@@ -78,6 +78,25 @@ p strong {
     position: relative;
     top: 2px;
 }
+.nav-container {
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.flex-grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    width: auto;
+}
+
+.col {
+    flex: 1;
+    padding: 20px;
+
 
 /* color palette values
 Yellow: 248, 218, 109
