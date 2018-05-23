@@ -8,7 +8,7 @@ const judgeDisplayTemplate = document.getElementById('judge-display-template');
 class JudgeDisplay {
     constructor(score) {
         this.score = score;
-        this.judgeState = '../images/Judge-default.png';
+        this.judgeState = '/images/Judge-default.png';
 
     }
 
