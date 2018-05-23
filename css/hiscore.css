@@ -3,8 +3,30 @@ body {
     
 }
 
+/* High Score Table Styles */
 
 table {
-    text-align: left;
-    
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #000;
+    text-align: center;
+}
+th {
+    font-family: 'Londrina Solid', cursive;
+    color: rgb(216, 57, 113);
+    font-size: 1.5em;
+    background:  rgba(255, 255, 255, .4);
+ font-weight: 700;
+ text-align: center;
+}
+td {
+    min-width: 300px;
+    text-align: center;
+}
+tr:nth-child(odd) {
+    background: none;
+}
+tr:nth-child(even) {
+    background:  rgba(255, 255, 255, .4);
 }

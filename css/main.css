@@ -80,25 +80,57 @@ p strong {
     position: relative;
     top: 2px;
 }
-.nav-container {
+
+button {
+    background-color: rgb(8, 22, 146);
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid rgb(234, 184, 75);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 28px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #000;
+    margin: 20px 0px 20px 0px;
+}
+button:hover {
+    background-color: rgb(216, 57, 113);
+    -moz-box-shadow: inset 0px 0px 0px 0px rgb(72, 126, 211);
+    -webkit-box-shadow: inset 0px 0px 0px 0px rgb(72, 126, 211);
+    box-shadow: inset 0px 0px 0px 0px rgb(72, 126, 211);
+}
+button:active {
+    
+    background-color: rgb(37, 76, 92);
+    position: relative;
+    top: 2px;
+}
+container {
     margin-top: 20px;
     text-align: center;
 
 }
 
+/* flexbox styles for centering table */
+
 .flex-grid{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 80%;
 }
 .row {
     width: auto;
+    
 }
 
 .col {
     flex: 1;
     padding: 20px;
-
+}
 
 /* color palette values
 yellow rgb(248, 218, 109);
@@ -112,3 +144,4 @@ Blue: 8, 22, 146
 Ocean Blue: 82, 161, 182
 Sky Blue: 72, 126, 211
 */
+

@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:500,500i,700,700i|Londrina+Solid:400,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/hiscore.css">
     <title>Project GitGrub : High Scores</title>
 </head>
-
 <body>
       <h1 class = "main-title">Project GitGrub</h1><h2>Kitchen Showdown Hall of Fame</h2>
 
@@ -20,9 +19,9 @@
   <div class = "flex-grid">
       <div class = "row">
         <table id = "high-score-display-table">
-      <thead><tr><th>Player Name</th><th>Score</th></tr></thead>
+      <thead><tr><th>Player Name</th><th class = "number-row">Score</th></tr></thead>
       <tbody>
-      <tr><td>joe blow</td><td>500</td></tr>
+      <tr><td>joe blow</td><td class="number-row">500</td></tr>
     </tbody>
   </table>
 </div>
@@ -30,10 +29,11 @@
  
   
      <button id = "clear-high-scores" onclick = "clearHighScoresArray();">Clear High Scores</button>
+     <div class = "row"></div>
      <div class = "nav-container">
      <a href="intro.html" class = "index-button">Start New Game</a>
         <a href="#" class = "index-button" onclick = "resumeGame();">Resume Game</a>
-        <a href="hiscores.html" class = "index-button">High Scores</a>
+        <a href="aboutus.html" class = "index-button">About Us</a>
         <a href="index.html" class = "index-button">Home</a>
     </div>
       
