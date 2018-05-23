@@ -113,43 +113,44 @@ class Recipe {
 }
 
 const omelet = new Recipe('Omelet',
-    [new Egg(10),
-        new Ham(9),
-        new Cheese(8),
-        new Bacon(7),
-        new Sausage(7),
+    [new Egg(50),
+        new Ham(30),
+        new Cheese(30),
+        new Bacon(20),
+        new Sausage(20)
     ]);
         
 const fullEnglish = new Recipe('Full English',
-    [new Egg(10),
-        new Beans(10),
-        new Sausage(9),
-        new Bread(7),
-        new Bacon(9),
+    [new Egg(30),
+        new Beans(30),
+        new Sausage(30),
+        new Bread(30),
+        new Bacon(30)
     ]);
 
 const benedict = new Recipe('Benedict',
-    [new Egg(10),
-        new Ham(10),
-        new Bread(9),
-        new Lemon(7),
-        new Bacon(3),
+    [new Egg(50),
+        new Ham(40),
+        new Bread(30),
+        new Lemon(20),
+        new Bacon(10)
     ]);
 
 const breakfastBurrito = new Recipe('Breakfast Burrito',
-    [new Egg(10),
-        new Ham(9),
-        new Bacon(9),
-        new Sausage(9),
-        new Potatoes(8),
+    [new Egg(50),
+        new Ham(20),
+        new Potatoes(40),
+        new Bacon(20),
+        new Sausage(20)
     ]);
 
 const hash = new Recipe('Hash',
-    [new ButternutSquash(20),
-        new Potatoes(10),
-        new Egg(6),
-        new Mushrooms(6),
-        new Bacon(4)]);
+    [new ButternutSquash(50),
+        new Potatoes(30),
+        new Mushrooms(30),
+        new Egg(20),
+        new Bacon(20)
+    ]);
 
 
 const breakfast = [omelet, fullEnglish, benedict, breakfastBurrito, hash];

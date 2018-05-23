@@ -31,7 +31,7 @@ class Transition {
         } else if(this.score < 100) {
             this.message = 'Nice work, you\ve cooked before, but you\re up against real competition in the next round!';
 
-        } else if(this.score > 150) {
+        } else if(this.score < 150) {
             this.message = 'Amazing! You should be a judge - that\'s a perfect dish!';
         }
 
@@ -55,12 +55,12 @@ class Transition {
             //pushes object into highScoreList array
             highScoreList.push(this.playerName, this.score);
 
-        } else if(this.score > 450) {
+        } else if(this.score < 450) {
             this.message = 'You\re among the greats! This dish is sure to put you in our Hall of Fame!';
             //pushes object into highScoreList array
             highScoreList.push(this.playerName, this.score);
         }
-        this.transitionMessage = document.querySelector('h3');
+        this.transitionMessage = document.querySelector('h2');
         this.transitionMessage.textContent = this.message;
         return dom;
     }
