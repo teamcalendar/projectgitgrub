@@ -23,7 +23,7 @@ class Transition {
         // var gameData = new Transition (roundNumber, playerName, score);
 
         //if statement selects proper transition message based on score and round
-        const dom = transitionTemplate.content;
+        const dom = transitionTemplate.content.cloneNode(true);
 
         if(this.roundNumber === 1 && this.score < 50){
             this.message = 'Well, that\'s OK to move on but you can do better! Got to step it up in the next round!';
@@ -60,7 +60,7 @@ class Transition {
             //pushes object into highScoreList array
             highScoreList.push(this.playerName, this.score);
         }
-        this.transitionMessage = document.querySelector('h2');
+        this.transitionMessage = dom.querySelector('h2');
         this.transitionMessage.textContent = this.message;
         return dom;
     }
