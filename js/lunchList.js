@@ -164,5 +164,7 @@ const tabbouleh = new Recipe('Tabbouleh',
         new Bulgar(8)]);
     
 const lunch = [tacos, chishNFips, ceviche, hamburger, tabbouleh];
-const dinner = [];
+const lunchIngredients = [new Beef(0), new Fish(0), new Chicken(0), new Bread(0), new Bulgar(0), new Mayonaise(0), new Tomatoes,
+    new Potatoes(0), new Lettuce(0), new Cilantro(0), new Mint(0), new Parsley(0), new Lemon(0), new Lime(0), new Peas(0), new Onion(0)];
+
     
