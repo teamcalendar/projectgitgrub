@@ -26,7 +26,20 @@ class GameApp {
         judgeDisplaySection.appendChild(judgeDisplayComponent.render());
 
         const roundDisplaySection = dom.getElementById('round-display');
-        const roundDisplayComponent = new RoundDisplay(this.roundNumber, this.score, this.playerName);
+        const roundDisplayComponent = new RoundDisplay(this.roundNumber, this.score, this.playerName, (score) => {
+            this.score += score;
+
+            //update score display
+
+            this.roundNumber++;
+
+            //trigger a transition
+
+            roundDisplayComponent.update(this.roundNumber);
+            
+            // update judge display based on score
+
+        });
         roundDisplaySection.appendChild(roundDisplayComponent.render());
         
         const scoreDisplaySection = dom.getElementById('score-display');
@@ -36,3 +49,4 @@ class GameApp {
         return dom;
     }
 }
+

@@ -9,3 +9,23 @@
     width: 300px;
     height: 500px;
 }
+h1 {
+    line-height: 1em;
+    text-shadow: 8px 5px 0px rgb(8, 22, 146);
+    margin-bottom: 0px;
+    -webkit-margin-after: 0px;
+}
+p {
+    font-size: 1.3em;
+    line-height: 1em;
+    color: rgb(8, 22, 146);
+}
+#chef-select {
+    float: left;
+    width: 50%;
+
+}
+#instructions {
+    float: right;
+    width: 50%;
+}
