@@ -16,6 +16,8 @@ class PlayerDisplay {
     render() {
         const dom = playerDisplayTemplate.content.cloneNode(true);
         const playerImage = dom.querySelector('img');
+        const playerDisplayedName = dom.querySelector('h3');
+        playerDisplayedName.textContent = this.playerName;
         playerImage.src = this.chefSelect;
         return dom;
     }
