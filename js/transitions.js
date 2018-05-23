@@ -20,7 +20,7 @@ class Transition {
     render() {
 
         // create the new player object
-        var gameData = new Transition (roundNumber, playerName, score);
+        // var gameData = new Transition (roundNumber, playerName, score);
 
         //pushes object into highScoreList array
         highScoreList.push(this.playerName, this.score);
