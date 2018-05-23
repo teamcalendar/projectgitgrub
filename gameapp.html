@@ -25,31 +25,30 @@
     <template id="player-display-template">
         <div>
             <h3>PLAYER</h3>
-            <img>
+            <img class="style-player">
         </div>
     </template>
     
     <template id="judge-display-template">
         <div>
             <h3>JUDGE</h3>
-            <img>
+            <img class="style-judge">
         </div>
     </template>
 
     <template id="round-display-template">
-        <img>
-        
+        <img class="style-table">
         <div id="ingredient-selector"></div>
     </template>
 
     <template id="ingredient-selector-template">
-            <div id="recipe-name"></div>
-
-            <div id="ingredient">
-                <button>Submit 🥘</button>
-            </div>
-            <img>
-        </template>
+        <div id="recipe-name">
+        </div>
+        <div id="ingredient">
+            <button>Submit 🥘</button>
+        </div>
+        <img class="style-roundbutton">
+    </template>
 
     <template id="ingredient-template">
         <label><img>
@@ -58,22 +57,15 @@
     </template>
 
     <template id="transition-template">
-            <div id = "transition-message-container">
-
-
-                    <div class = "top-lights"></div>
-            
-                    <h2 class = "transition-message">Replace this info with dynamic text from transitions.js and go on to the next round!</h2>
-            
-            
-            
-                        <div class = "bottom-lights"></div>
-                    
-                </div>
+        <div id = "transition-message-container">
+            <div class="top-lights"></div>
+            <h2 class="transition-message">Replace this info with dynamic text from transitions.js and go on to the next round!</h2>
+            <div class="bottom-lights"></div>       
+        </div>
     </template>
     
     <template id="score-display-template">
-        <div>
+        <div class="style-score">
             <h3>Score:</h3>
             <h2></h2>
         </div>
