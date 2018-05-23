@@ -60,11 +60,13 @@ class Transition {
             //pushes object into highScoreList array
             highScoreList.push(this.playerName, this.score);
         }
-        const transitionMessage = document.querySelector('h3');
-        transitionMessage.textContent = this.message;
+        this.transitionMessage = document.querySelector('h3');
+        this.transitionMessage.textContent = this.message;
         return dom;
     }
-
+    clearTransitionMessage() {
+        this.transitionMessage.textContent = '';
+    }
 }
 
 console.log(highScoreList);
