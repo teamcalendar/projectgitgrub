@@ -19,7 +19,7 @@ class Transition {
     render() {
 
         // create the new player object
-        var gameData = new Transition (roundNumber, playerName, score);
+        // var gameData = new Transition (roundNumber, playerName, score);
 
         //if statement selects proper transition message based on score and round
         const dom = transitionTemplate.content;

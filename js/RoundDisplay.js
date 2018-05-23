@@ -1,5 +1,5 @@
 /* exported RoundDisplay */
-/* globals IngredientSelectorDisplay, Transition */
+/* globals IngredientSelectorDisplay, Transition, breakfast */
 
 'use strict';
 
@@ -39,5 +39,4 @@ function pickRandomRecipe(recipeArray) {
     const singleRecipe = recipeArray[index];
     return singleRecipe;
 }
-
 

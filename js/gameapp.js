@@ -7,6 +7,10 @@ const appTemplate = document.getElementById('app-template');
 
 class GameApp {
     constructor() {
+        this.roundNumber = 1;
+        this.score = 0;
+        this.playerName;
+        this.chefSelect;
 
     }
 
@@ -14,19 +18,19 @@ class GameApp {
         const dom = appTemplate.content;
 
         const playerDisplaySection = dom.getElementById('player-display');
-        const playerDisplayComponent = new PlayerDisplay();
+        const playerDisplayComponent = new PlayerDisplay(this.chefSelect, this.playerName);
         playerDisplaySection.appendChild(playerDisplayComponent.render());
         
         const judgeDisplaySection = dom.getElementById('judge-display');
-        const judgeDisplayComponent = new JudgeDisplay();
+        const judgeDisplayComponent = new JudgeDisplay(this.score);
         judgeDisplaySection.appendChild(judgeDisplayComponent.render());
 
         const roundDisplaySection = dom.getElementById('round-display');
-        const roundDisplayComponent = new RoundDisplay();
+        const roundDisplayComponent = new RoundDisplay(this.roundNumber, this.score, this.playerName);
         roundDisplaySection.appendChild(roundDisplayComponent.render());
         
         const scoreDisplaySection = dom.getElementById('score-display');
-        const scoreDisplayComponent = new ScoreDisplay();
+        const scoreDisplayComponent = new ScoreDisplay(this.score);
         scoreDisplaySection.appendChild(scoreDisplayComponent.render());
         
         return dom;
