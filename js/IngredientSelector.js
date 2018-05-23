@@ -1,14 +1,16 @@
 /* exported IngredientSelectorDisplay */
-/* globals Ingredient, getRandomInt */
+/* globals Ingredient, getRandomInt, breakfastIngredients */
 
 'use strict';
 
 const ingredientSelectorTemplate = document.getElementById('ingredient-selector-template');
 
 class IngredientSelectorDisplay {
-    constructor(recipe, allIngredients) {
+    constructor(recipe, onSubmit) {
         this.recipe = recipe;
-        this.allIngredients = allIngredients;
+        this.allIngredients = breakfastIngredients;
+        this.onSubmit = onSubmit;
+        this.score = 0;
     }
 
     render() {
@@ -21,7 +23,6 @@ class IngredientSelectorDisplay {
 
         //Calculate how many more "dummy" ingredients are needed
         const remainingIngredients = 10 - arrayOf10Ingredients.length;
-        this.allIngredients = [new Cheese(0), new Bacon(0), new Egg(0), new Mushrooms(0), new BellPepper(0), new Ham(0), new Sausage(0), new Bread(0), new Beans(0), new ButternutSquash(0), new Potatoes(0), new Tomatoes(0)];
 
         //Randomly select enough unique "dummy" ingredients and add them into arrayOf10Ingredients
         for(let j = 0; j < remainingIngredients;) {
@@ -41,15 +42,26 @@ class IngredientSelectorDisplay {
             }
         }
 
-
         shuffleArray(arrayOf10Ingredients);
 
+        // putting the chosen ingredients onto the page
         const ingredientSelectorSection = dom.getElementById('ingredient');
         for(let i = 0; i < 10; i++) {
-            const ingredientSelectorComponent = new Ingredient(arrayOf10Ingredients[i]);
+            const ingredientSelectorComponent = new Ingredient(arrayOf10Ingredients[i], (ingredient, statusChange) => {
+                if(statusChange === true) {
+                    console.log(ingredient.constructor.name, 'is selected');
+                }
+                
+                this.score += ingredient.pointValue;
+                console.log(this.score);
+            });
             ingredientSelectorSection.appendChild(ingredientSelectorComponent.render());
         }
-
+        const submitButton = dom.querySelector('button');
+        submitButton.addEventListener('click', () => {
+            // event.preventDefault;
+            this.onSubmit(this.score);
+        });
         return dom;
     }
 }

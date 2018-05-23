@@ -6,17 +6,23 @@
 const ingredientTemplate = document.getElementById('ingredient-template');
 
 class Ingredient {
-    constructor(ingredient) {
+    constructor(ingredient, onClick) {
         this.ingredient = ingredient;
+        this.onClick = onClick;
     }
 
     render() {
+        this.ingredient.selected = false;
         const dom = ingredientTemplate.content.cloneNode(true);
+
         const image = dom.querySelector('img');
         image.src = './images/' + this.ingredient.image;
-        image.addEventListener('click', () => {
-            console.log(this.ingredient);
+
+        const input = dom.querySelector('input');
+        input.addEventListener('change', () => {
+            this.onClick(this.ingredient, input.checked);
         });
+        
         return dom;
     }
 }
