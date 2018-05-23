@@ -4,15 +4,10 @@ body {
     text-align: center;
 }
 
-h1 {
-    font-family: 'Londrina Solid', cursive;
-    font-size: 5em;
-    font-weight: 900;
-    text-align: center;
-}
-
 h2 {
     font-family: 'Londrina Solid', cursive;
+    color: white;
+    text-shadow: 2px 2px 0px black;
     font-size: 2.5em;
     font-weight: 700;
     text-align: center;
@@ -24,6 +19,7 @@ ul {
 
 .credits {
     font-size: -1;
+    color: rgb(8, 22, 146);
     font-weight: 500i;
     text-align: center;
 }
