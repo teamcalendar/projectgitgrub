@@ -66,6 +66,9 @@ class GameApp {
             
             window.setTimeout(() => {
                 this.transitionComponent.clearTransitionMessage();
+                if(this.roundNumber === 3){
+                    window.location.href = 'hiscores.html';
+                }
                 this.roundNumber ++;
                 this.roundDisplayComponent.update(this.roundNumber);
             }, 3000);
