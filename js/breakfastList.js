@@ -4,6 +4,7 @@
 
 
 // Ingredient Construction
+
 class Egg {
     constructor(pointValue) {
         this.image = 'egg.jpg';
@@ -83,19 +84,13 @@ class Mushrooms {
     }
 }
 
-class BellPepper {
-    constructor(pointValue) {
-        this.image = 'bellPepper.jpg';
-        this.pointValue = pointValue;
-    }
-}
-
 class Lemon {
     constructor(pointValue) {
         this.image = 'lemon.jpg';
         this.pointValue = pointValue;
     }
 }
+
 
 //Recipe Construction 
 class Recipe {
@@ -109,40 +104,46 @@ const omelet = new Recipe('Omelet',
     [new Egg(10),
         new Ham(9),
         new Cheese(8),
-        new Mushrooms(5),
-        new BellPepper(3)]);
-
+        new Bacon(7),
+        new Sausage(7),
+    ]);
+        
 const fullEnglish = new Recipe('Full English',
     [new Egg(10),
         new Beans(10),
         new Sausage(9),
         new Bread(7),
         new Bacon(9),
-        new Tomatoes(5)]);
+    ]);
 
 const benedict = new Recipe('Benedict',
     [new Egg(10),
         new Ham(10),
         new Bread(9),
-        new Lemon(7)]);
+        new Lemon(7),
+        new Bacon(3),
+    ]);
 
 const breakfastBurrito = new Recipe('Breakfast Burrito',
     [new Egg(10),
         new Ham(9),
+        new Bacon(9),
+        new Sausage(9),
         new Potatoes(8),
-        new Cheese(8),
-        new Bread(8)]);
+    ]);
 
 const hash = new Recipe('Hash',
     [new ButternutSquash(20),
         new Potatoes(10),
         new Egg(6),
         new Mushrooms(6),
-        new BellPepper(4)]);
+        new Bacon(4)]);
 
 
 const breakfast = [omelet, fullEnglish, benedict, breakfastBurrito, hash];
-const lunch = [];
-const dinner = [];
+
+const breakfastIngredients = [new Egg(0), new Ham(0), new Bacon(0), new Sausage(0), new Bread(0), new Cheese(0),
+    new Tomatoes(0), new Potatoes(0), new ButternutSquash(0), new Beans(0), new Mushrooms, new Lemon(0)];
+
 
 
