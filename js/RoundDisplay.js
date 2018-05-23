@@ -25,6 +25,8 @@ class RoundDisplay {
     render() {
         const dom = roundDisplayTemplate.content;
         const recipe = pickRandomRecipe(this.recipeList);
+        const tableImage = dom.querySelector('img');
+        tableImage.src = '/images/Table.png';
 
         const itemSelectorSection = dom.getElementById('ingredient-selector');
         const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);

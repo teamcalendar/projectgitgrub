@@ -17,9 +17,9 @@ class IngredientSelectorDisplay {
         const dom = ingredientSelectorTemplate.content;
         const recipeName = dom.getElementById('recipe-name');
         recipeName.textContent = this.recipe.name;
-        const tableImage = dom.querySelector('img');
-        tableImage.src = '/images/Table.png';
-
+        
+        const addRoundButton = dom.querySelector('img');
+        addRoundButton.src = '/images/Roundbutton.png';
         //Find out how many ingredients the recipe specifies, and add them to arrayOf10Ingredients
         let arrayOf10Ingredients = this.recipe.ingredients;
 
