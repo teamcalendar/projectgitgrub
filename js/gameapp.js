@@ -3,14 +3,20 @@
 
 'use strict';
 
+const userArray = window.localStorage.getItem('userData');
+const userArrayParse = JSON.parse(userArray);
+const chefSelect = userArrayParse[0];
+const playerName = userArrayParse[1];
+console.log('user array info:', userArrayParse);
+
 const appTemplate = document.getElementById('app-template');
 
 class GameApp {
     constructor() {
         this.roundNumber = 1;
         this.score = 0;
-        this.playerName;
-        this.chefSelect;
+        this.playerName = playerName;
+        this.chefSelect = chefSelect;
 
     }
 
@@ -18,7 +24,7 @@ class GameApp {
         const dom = appTemplate.content;
 
         const playerDisplaySection = dom.getElementById('player-display');
-        const playerDisplayComponent = new PlayerDisplay(this.chefSelect, this.playerName);
+        const playerDisplayComponent = new PlayerDisplay(this.playerName, this.chefSelect);
         playerDisplaySection.appendChild(playerDisplayComponent.render());
         
         const judgeDisplaySection = dom.getElementById('judge-display');
