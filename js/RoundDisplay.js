@@ -15,20 +15,39 @@ class RoundDisplay {
     }
 
     update(roundNumber){
-        console.log('welcome to round', roundNumber);
-        
+        this.roundNumber = roundNumber;
+
+        const itemSelector = this.itemSelectorSection;
+        while(itemSelector.lastElementChild) {
+            
+            console.log('hey');
+            itemSelector.lastElementChild.remove();
+        }
+
+        const recipe = pickRandomRecipe(this.recipeList);
+
 
         
+        const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);
+  
+        itemSelector.appendChild(itemSelectorComponent.render());
+
+
+        //once the submit button is clicked, the page must reload, with a new recipe
+        console.log('welcome to round', roundNumber);
+
     }
 
 
     render() {
-        const dom = roundDisplayTemplate.content;
+        const dom = roundDisplayTemplate.content.cloneNode(true);
         const recipe = pickRandomRecipe(this.recipeList);
+        const tableImage = dom.querySelector('img');
+        tableImage.src = '/images/Table.png';
 
-        const itemSelectorSection = dom.getElementById('ingredient-selector');
+        this.itemSelectorSection = dom.getElementById('ingredient-selector');
         const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);
-        itemSelectorSection.appendChild(itemSelectorComponent.render());
+        this.itemSelectorSection.appendChild(itemSelectorComponent.render());
 
         return dom;
     }

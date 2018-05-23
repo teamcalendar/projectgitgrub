@@ -25,7 +25,6 @@ class Bacon {
     }
 }
 
-
 class Sausage {
     constructor(pointValue) {
         this.image = 'sausage.jpg';
@@ -39,7 +38,6 @@ class Bread {
         this.pointValue = pointValue;
     }
 }
-
 
 class Cheese {
     constructor(pointValue) {
@@ -90,6 +88,64 @@ class Lemon {
     }
 }
 
+class Tortilla {
+    constructor(pointValue) {
+        this.image = 'tortilla.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Avocado {
+    constructor(pointValue) {
+        this.image = 'avocado.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Onion {
+    constructor(pointValue) {
+        this.image = 'onion.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Beef {
+    constructor(pointValue) {
+        this.image = 'beef.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Fish {
+    constructor(pointValue) {
+        this.image = 'fish.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Chicken {
+    constructor(pointValue) {
+        this.image = 'chicken.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Lettuce {
+    constructor(pointValue) {
+        this.image = 'lettuce.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+class Lime {
+    constructor(pointValue) {
+        this.image = 'Lime.jpg';
+        this.pointValue = pointValue;
+    }
+}
+
+
+
 
 //Recipe Construction 
 class Recipe {
@@ -99,12 +155,17 @@ class Recipe {
     }
 }
 
+
+
+
+// BREAKFAST RECIPES
+
 const omelet = new Recipe('Omelet',
     [new Egg(50),
         new Ham(30),
         new Cheese(30),
         new Bacon(20),
-        new Sausage(20)
+        new Avocado(20)
     ]);
         
 const fullEnglish = new Recipe('Full English',
@@ -120,14 +181,14 @@ const benedict = new Recipe('Benedict',
         new Ham(40),
         new Bread(30),
         new Lemon(20),
-        new Bacon(10)
+        new Potatoes(10)
     ]);
 
 const breakfastBurrito = new Recipe('Breakfast Burrito',
     [new Egg(50),
         new Ham(20),
         new Potatoes(40),
-        new Bacon(20),
+        new Avocado(20),
         new Sausage(20)
     ]);
 
@@ -135,15 +196,106 @@ const hash = new Recipe('Hash',
     [new ButternutSquash(50),
         new Potatoes(30),
         new Mushrooms(30),
-        new Egg(20),
+        new Onion(20),
         new Bacon(20)
     ]);
 
-
 const breakfast = [omelet, fullEnglish, benedict, breakfastBurrito, hash];
 
-const breakfastIngredients = [new Egg(0), new Ham(0), new Bacon(0), new Sausage(0), new Bread(0), new Cheese(0),
-    new Tomatoes(0), new Potatoes(0), new ButternutSquash(0), new Beans(0), new Mushrooms(0), new Lemon(0)];
+const breakfastIngredients = [
+    new Egg(0),
+    new Ham(0),
+    new Bacon(0),
+    new Sausage(0),
+    new Bread(0),
+    new Cheese(0),
+    new Tomatoes(0),
+    new Potatoes(0),
+    new ButternutSquash(0),
+    new Beans(0),
+    new Mushrooms(0),
+    new Lemon(0),
+    new Tortilla(0),
+    new Avocado(0),
+    new Onion(0)
+];
 
 
 
+
+
+
+
+
+
+
+// LUNCH RECIPES
+
+const tacos = new Recipe('Carne Asada Tacos',
+    [new Tortilla(50),
+        new Beef(40),
+        new Onion(20),
+        new Cheese(20),
+        new Lime(20)
+    ]);
+    
+const salad = new Recipe('Cobb Salad',
+    [new Lettuce(40),
+        new Tomatoes(30),
+        new Bacon(30),
+        new Egg(30),
+        new Avocado(20)
+    ]);
+
+const ceviche = new Recipe('Ceviche',
+    [new Fish(50),
+        new Lime(40),
+        new Onion(30),
+        new Tomatoes(20),
+        new Tortilla(10)
+    ]);
+
+const hamburger = new Recipe('Hamburger',
+    [new Beef(50),
+        new Bread(40),
+        new Lettuce(30),
+        new Tomatoes(20),
+        new Onion(10)
+    ]);
+    
+const nachos = new Recipe('Nachos',
+    [new Tortilla(50),
+        new Cheese(40),
+        new Beans(30),
+        new Tomatoes(20),
+        new Bacon(10)
+    ]);
+    
+const lunch = [tacos, salad, ceviche, hamburger, nachos];
+const lunchIngredients = [
+    new Lettuce(0),
+    new Tomatoes(0),
+    new Bacon(0),
+    new Egg(0),
+    new Avocado(0),
+    new Fish(0),
+    new Lime(0),
+    new Onion(0),
+    new Tortilla(0),
+    new Beef(0),
+    new Bread(0),
+    new Cheese(0),
+    new Beans(0)
+];
+
+
+
+// DINNER RECIPES
+
+const chickenSandwich = new Recipe('Chicken Sandwich',
+    [new Chicken(50),
+        new Bread(40),
+        new Lettuce(30)
+        
+
+    ]);
