@@ -1,5 +1,5 @@
 /* exported GameApp */
-/* globals PlayerDisplay, JudgeDisplay, RoundDisplay, ScoreDisplay */
+/* globals PlayerDisplay, JudgeDisplay, RoundDisplay, Transition, ScoreDisplay */
 
 'use strict';
 
@@ -51,6 +51,10 @@ class GameApp {
         const scoreDisplaySection = dom.getElementById('score-display');
         const scoreDisplayComponent = new ScoreDisplay(this.score);
         scoreDisplaySection.appendChild(scoreDisplayComponent.render());
+        
+        const transitionSection = dom.getElementById('transition');
+        const transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
+        transitionSection.appendChild(transitionComponent.render());
         
         return dom;
     }
