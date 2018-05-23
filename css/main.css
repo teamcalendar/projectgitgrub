@@ -21,18 +21,14 @@ h1.main-title {
     -webkit-text-stroke-width: 3px;
 }
 
-/* color palette values
-Yellow: 248, 218, 109
-Light Brown: 191, 106, 44
-Red Brown: 142, 44, 24
-Pink: 216, 57, 113
-Dark Teal: 37, 76, 92
-Gold: 234, 184, 75
-Orange: 218, 79, 39
-Blue: 8, 22, 146
-Ocean Blue: 82, 161, 182
-Sky Blue: 72, 126, 211
-*/
+h2 {
+    font-family: 'Londrina Solid', cursive;
+    color: white;
+    text-shadow: 2px 2px 0px black;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+}
 
 p {
     font-family: 'IBM Plex Sans', sans-serif;
@@ -49,14 +45,14 @@ p strong {
     text-align: center;
 }
 .index-button {
-    -moz-box-shadow: inset 0px 1px 0px 0px #bee2f9;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #bee2f9;
-    box-shadow: inset 0px 1px 0px 0px #bee2f9;
-    background-color: #63b8ee;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgb(72, 126, 211);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgb(72, 126, 211);
+    box-shadow: inset 0px 2px 2px 0px rgb(72, 126, 211);
+    background-color: rgb(8, 22, 146);
     display: inline-block;
     cursor: pointer;
     border-radius: 6px;
-    border: 3px solid #e7f705;
+    border: 4px solid rgb(234, 184, 75);
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
     color: #fff;
@@ -66,9 +62,27 @@ p strong {
     text-shadow: 0px 1px 0px #000;
 }
 .index-button:hover {
-    background-color: #468ccf;
+    background-color: rgb(216, 57, 113);
+    -moz-box-shadow: inset 0px 0px 0px 0px rgb(72, 126, 211);
+    -webkit-box-shadow: inset 0px 0px 0px 0px rgb(72, 126, 211);
+    box-shadow: inset 0px 0px 0px 0px rgb(72, 126, 211);
 }
 .index-button:active {
+    
+    background-color: rgb(37, 76, 92);
     position: relative;
     top: 2px;
 }
+
+/* color palette values
+Yellow: 248, 218, 109
+Light Brown: 191, 106, 44
+Red Brown: 142, 44, 24
+Pink: 216, 57, 113
+Dark Teal: 37, 76, 92
+Gold: 234, 184, 75
+Orange: 218, 79, 39
+Blue: 8, 22, 146
+Ocean Blue: 82, 161, 182
+Sky Blue: 72, 126, 211
+*/
