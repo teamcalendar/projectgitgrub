@@ -14,7 +14,7 @@ class IngredientSelectorDisplay {
     }
 
     render() {
-        const dom = ingredientSelectorTemplate.content;
+        const dom = ingredientSelectorTemplate.content.cloneNode(true);
         const recipeName = dom.getElementById('recipe-name');
         recipeName.textContent = this.recipe.name;
         
