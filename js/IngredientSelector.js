@@ -61,7 +61,7 @@ class IngredientSelectorDisplay {
         const submitButton = dom.querySelector('button');
         submitButton.addEventListener('click', () => {
             // event.preventDefault;
-            this.onSubmit(this.score);
+            this.onSubmit(this.roundScore);
         });
         return dom;
     }
