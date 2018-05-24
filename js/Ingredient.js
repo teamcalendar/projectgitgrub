@@ -16,7 +16,7 @@ class Ingredient {
         const dom = ingredientTemplate.content.cloneNode(true);
 
         const image = dom.querySelector('img');
-        image.src = './images/' + this.ingredient.image;
+        image.src = 'images/' + this.ingredient.image;
 
         const input = dom.querySelector('input');
         input.addEventListener('change', () => {
