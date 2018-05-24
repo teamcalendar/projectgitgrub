@@ -9,80 +9,80 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/gameapp.css">
     <link rel="stylesheet" type="text/css" href="css/transition.css">
-    <title>Project GitGrub</title>
+    <title>Project GitGrub : Game Screen</title>
 </head>
-<body>
-    <div id="root"></div>
-    
-    <template id="app-template">
-        <h1 class="main-title">Project GitGrub</h1>
-        <div id="player-display"></div>
-        <div id="score-display"></div>
-        <div id="judge-display"></div>
-        <div id="round-display"></div>
-        <div id="transition"></div>
-    </template>
-
-    <template id="player-display-template">
-        <div>
-            <h3 class="player-name">PLAYER</h3>
-            <img class="style-player">
-        </div>
-    </template>
-    
-    <template id="judge-display-template">
-        <div>
-            <h3 class="judge-name">JUDGE</h3>
-            <img class="style-judge">
-        </div>
-    </template>
-
-    <template id="round-display-template">
-        <img class="style-table">
-        <div id="ingredient-selector"></div>
-    </template>
-
-    <template id="ingredient-selector-template">
-        <div id="recipe-name" class="flex-grid">
-        </div>
-        <img id="style-roundbutton">
-        <div id="ingredient">
-        </div>
+    <body>
+        <div id="root"></div>
         
-    </template>
+        <template id="app-template">
+            <h1 class="main-title">Project GitGrub</h1>
+            <div id="player-display"></div>
+            <div id="score-display"></div>
+            <div id="judge-display"></div>
+            <div id="round-display"></div>
+            <div id="transition"></div>
+        </template>
 
-    <template id="ingredient-template">
-        <label><img class="individual-ingredient">
-        <input type="checkbox" style="display: none">
-        </label>
-    </template>
-
-    <template id="transition-template">
-        <section>
-            <div id = "transition-message-container">
-                <div class="top-lights"></div>
-                <h2 class="transition-message"></h2>
-                <div class="bottom-lights"></div>       
+        <template id="player-display-template">
+            <div>
+                <h3 class="player-name">PLAYER</h3>
+                <img class="style-player">
             </div>
-        </section>
-    </template>
-    
-    <template id="score-display-template">
-        <div id="score-container">
-            <h3 class="style-score">Score:</h3>
-            <h2></h2>
-        </div>
-    </template>
+        </template>
+        
+        <template id="judge-display-template">
+            <div>
+                <h3 class="judge-name">JUDGE</h3>
+                <img class="style-judge">
+            </div>
+        </template>
 
-    <script src = "js/recipesList.js"></script>
-    <script src = "js/scoredisplay.js"></script>
-    <script src = "js/transitions.js"></script>
-    <script src = "js/Ingredient.js"></script>
-    <script src = "js/IngredientSelector.js"></script>
-    <script src = "js/RoundDisplay.js"></script>
-    <script src = "js/playerdisplay.js"></script>
-    <script src = "js/judgedisplay.js"></script>
-    <script src = "js/gameapp.js"></script>
-    <script src = "js/main.js"></script>
-</body>
+        <template id="round-display-template">
+            <img class="style-table">
+            <div id="ingredient-selector"></div>
+        </template>
+
+        <template id="ingredient-selector-template">
+            <div id="recipe-name" class="flex-grid">
+            </div>
+            <img id="style-roundbutton">
+            <div id="ingredient">
+            </div>
+            
+        </template>
+
+        <template id="ingredient-template">
+            <label><img class="individual-ingredient">
+            <input type="checkbox" style="display: none">
+            </label>
+        </template>
+
+        <template id="transition-template">
+            <section>
+                <div id = "transition-message-container">
+                    <div class="top-lights"></div>
+                    <h2 class="transition-message"></h2>
+                    <div class="bottom-lights"></div>       
+                </div>
+            </section>
+        </template>
+        
+        <template id="score-display-template">
+            <div id="score-container">
+                <h3 class="style-score">Score:</h3>
+                <h2></h2>
+            </div>
+        </template>
+
+        <script src = "js/recipesList.js"></script>
+        <script src = "js/scoredisplay.js"></script>
+        <script src = "js/transitions.js"></script>
+        <script src = "js/Ingredient.js"></script>
+        <script src = "js/IngredientSelector.js"></script>
+        <script src = "js/RoundDisplay.js"></script>
+        <script src = "js/playerdisplay.js"></script>
+        <script src = "js/judgedisplay.js"></script>
+        <script src = "js/gameapp.js"></script>
+        <script src = "js/main.js"></script>
+    </body>
 </html>
