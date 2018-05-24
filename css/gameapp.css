@@ -58,7 +58,8 @@ body {
     font-size: 3em;
     font-family: 'Londrina Solid', cursive;
     font-weight: 900;
-    color: rgb(216, 57, 113);
+    color: rgb(8, 22, 146);
+    text-shadow: 3px 3px 0px #fff;
     text-align: center;
     margin-bottom: -25px;
 }
