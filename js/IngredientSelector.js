@@ -60,7 +60,7 @@ class IngredientSelectorDisplay {
         // const submitButton = dom.querySelector('button');
 
         this.submitButton = dom.querySelector('img');
-        this.submitButton.src = '/images/Roundbutton.png';
+        this.submitButton.src = 'images/Roundbutton.png';
 
         this.submitButton.addEventListener('click', () => {
             // event.preventDefault;
