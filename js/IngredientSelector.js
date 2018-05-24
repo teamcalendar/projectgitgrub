@@ -18,9 +18,6 @@ class IngredientSelectorDisplay {
         const recipeName = dom.getElementById('recipe-name');
         recipeName.textContent = this.recipe.name;
         
-        const addRoundButton = dom.querySelector('img');
-        addRoundButton.src = '/images/Roundbutton.png';
-        
         //Find out how many ingredients the recipe specifies, and add them to arrayOf10Ingredients
         let arrayOf10Ingredients = this.recipe.ingredients;
 
@@ -60,8 +57,12 @@ class IngredientSelectorDisplay {
             });
             ingredientSelectorSection.appendChild(ingredientSelectorComponent.render());
         }
-        const submitButton = dom.querySelector('button');
-        submitButton.addEventListener('click', () => {
+        // const submitButton = dom.querySelector('button');
+
+        const addRoundButton = dom.querySelector('img');
+        addRoundButton.src = '/images/Roundbutton.png';
+
+        addRoundButton.addEventListener('click', () => {
             // event.preventDefault;
             this.onSubmit(this.roundScore);
         });
