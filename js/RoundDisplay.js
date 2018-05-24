@@ -14,6 +14,10 @@ class RoundDisplay {
         this.onSubmit = onSubmit;
     }
 
+    hideIngredients() {
+        console.log('hide');
+    }
+
     update(roundNumber){
         this.roundNumber = roundNumber;
 
@@ -29,9 +33,9 @@ class RoundDisplay {
         console.log('welcome to round', roundNumber);
         
         if(this.roundNumber === 2) {
-            document.body.style.backgroundImage = 'url(images/Round2-bg.jpg)';
+            document.getElementById('root').style.backgroundImage = 'url(images/Round2-bg.jpg)';
         } else if(this.roundNumber === 3) {
-            document.body.style.backgroundImage = 'url(images/Round3-bg.jpg)';
+            document.getElementById('root').style.backgroundImage = 'url(images/Round3-bg.jpg)';
         }
     }
 

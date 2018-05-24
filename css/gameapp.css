@@ -12,7 +12,8 @@ body {
     margin: auto;
     background-repeat: no-repeat;
     background-size: 1000px, 900px;
-    border: 5px solid;
+    border: 5px solid black;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,6 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 90%;
+    margin-top: -50px;
 }
 
 h1.main-title {
@@ -42,15 +44,15 @@ h1.main-title {
 }
 
 .style-table {
+    margin-top: -50px;
     width: 1000px;
     height: 300px;
-    top: 540px;
+    
     left: 0;
     z-index: 2;
 }
 
 .player-name {
-    position: absolute;
     font-family: 'Londrina Solid', cursive;
     font-weight: 700;
     font-size: 3em;
@@ -58,12 +60,13 @@ h1.main-title {
     line-height: 1em;
     text-shadow: 5px 5px 0px #000;
     text-transform: uppercase;
-    left: 150px;
-    top: 480px;
-    z-index: 99;
+    z-index: 10;
+    margin-top: 20px;
+    margin-bottom: -20px;
+
 }
+
 .judge-name {
-    position: absolute;
     font-family: 'Londrina Solid', cursive;
     font-weight: 700;
     font-size: 3em;
@@ -71,10 +74,11 @@ h1.main-title {
     line-height: 1em;
     text-shadow: 5px 5px 0px #000;
     text-transform: uppercase;
-    left: 780px;
-    top: 480px;
-    z-index: 99;
+    z-index: 10;
+    margin-top: 20px;
+    margin-bottom: -20px;
 }
+
 .style-score {
     font-size: 3em;
     font-family: 'Londrina Solid', cursive;
@@ -85,19 +89,26 @@ h1.main-title {
     margin-bottom: -25px;
 }
 
-#ingredient-selector {
+#round-display {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
+#ingredient-selector {
+    margin-top: -580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #recipe-name {
     background-color: rgba(0, 0, 0, .6);
-    display: flex;
     text-align: center;
     padding: 10px 20px;
     border-radius: 20px;
     max-width: 400px;
+    flex-shrink: 0;
     font-family: 'Londrina Solid', cursive;
     font-weight: 500;
     font-size: 3em;
@@ -105,29 +116,44 @@ h1.main-title {
     line-height: 1em;
     text-shadow: 3px 3px 0px #000;
     z-index: 4;
+    margin-bottom: -30px;
 }
+
 #ingredient { 
-    position: absolute;
     width: 1000px;
     left: 50px;
     top: 500px;
     z-index: 5;
-    
+
 }
+
 #style-roundbutton {
-    position: absolute;
+    margin-bottom: -50px;
     width: 350px;
     cursor: pointer;
     left: 330px;
     top: 290px;
     z-index: 4;
 }
+
 .individual-ingredient {
     width: 150px;
-    padding: 10px;
+    margin: 0px 10px;
+    cursor: pointer;
+
 }
+
 .selected-ingredient {
-    border: 2px solid white;
-    width: 150px;
-    border-radius: 100px;
+    border: 3px solid white;
+    border-radius: 75px;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+#transition-message-container {
+    position: absolute;
+    margin: auto;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
 }
