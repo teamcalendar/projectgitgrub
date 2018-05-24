@@ -33,7 +33,7 @@ class Transition {
         }
 
         if(this.roundNumber === 2 && this.score < 200){
-            this.message = 'You need to step it up if you\re going to stay in this kitchen!! On to the last round!';
+            this.message = 'You need to step it up if you\'re going to stay in this kitchen!! On to the last round!';
 
         } else if(this.roundNumber === 2 && this.score < 250) {
             this.message = 'Fair... OK... Boring!! But good enough to move on to the next round!';
@@ -43,7 +43,7 @@ class Transition {
         }
 
         if(this.roundNumber === 3 && this.score < 350) {
-            this.message = 'Time for you to go home! I don\t think you\re cut out for our Hall of Fame!';
+            this.message = 'Time for you to go home! I don\'t think you\re cut out for our Hall of Fame!';
             //pushes object into highScoreList array
             highScoreList.push(this.playerName, this.score);
 
@@ -87,3 +87,15 @@ const highScore = [
 window.onbeforeunload = () => {
     window.localStorage.setItem('highScore', JSON.stringify(highScore));
 };
+
+
+ResumeGame() {
+    //gets and stores user score
+    //gets and stores current round
+    //gets and stores player name
+    //gets and stores player avatar
+    document.cookie = "cookiename = userdata"
+
+    console.log(cookie);
+
+}
