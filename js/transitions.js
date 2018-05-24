@@ -2,8 +2,7 @@
 
 'use strict';
 
-let highScoreList = [];
-
+let highScore = [];
 
 
 const transitionTemplate = document.getElementById('transition-template');
@@ -28,7 +27,7 @@ class Transition {
         } else if(this.roundNumber === 1 && this.score < 100) {
             this.message = 'Nice work, you\ve cooked before, but you\re up against real competition in the next round!';
 
-        } else if(this.roundNumber === 1 && this.score < 150) {
+        } else if(this.roundNumber === 1 && this.score <= 150) {
             this.message = 'Amazing! You should be a judge - that\'s a perfect dish!';
         }
 
@@ -38,25 +37,35 @@ class Transition {
         } else if(this.roundNumber === 2 && this.score < 250) {
             this.message = 'Fair... OK... Boring!! But good enough to move on to the next round!';
 
-        } else if(this.roundNumber === 2 && this.score < 300) {
+        } else if(this.roundNumber === 2 && this.score <= 300) {
             this.message = 'Are you sure you aren\'t a professional? This dish is fantastic! Now go take on the final round!';
         }
 
         if(this.roundNumber === 3 && this.score < 350) {
             this.message = 'Time for you to go home! I don\'t think you\re cut out for our Hall of Fame!';
             //pushes object into highScoreList array
-            highScoreList.push(this.playerName, this.score);
+            highScore.push({
+                playerName: this.playerName,
+                score: this.score
+            });
+            console.log(highScore);
 
         } else if(this.roundNumber === 3 && this.score < 400) {
             this.message = 'You may not be the #1 score, but you did yourself proud! Great cooking skills!';
             //pushes object into highScoreList array
-            highScoreList.push(this.playerName, this.score);
-
-        } else if(this.roundNumber === 3 && this.score < 450) {
+            highScore.push({
+                playerName: this.playerName,
+                score: this.score
+            });
+            console.log(highScore);
+        } else if(this.roundNumber === 3 && this.score <= 450) {
             this.message = 'You\re among the greats! This dish is sure to put you in our Hall of Fame!';
             //pushes object into highScoreList array
-            highScoreList.push(this.playerName, this.score);
-        }
+            highScore.push({
+                playerName: this.playerName,
+                score: this.score
+            });
+            console.log(highScore);        }
         this.transitionMessage = dom.querySelector('h2');
         this.transitionMessage.textContent = this.message;
         return dom;
@@ -69,20 +78,7 @@ class Transition {
     }
 }
 
-const highScore = [
-    {
-        playerName: 'Zack',
-        score: 451
-    },
-    {
-        playerName: 'Arthur',
-        score: 450
-    },
-    {
-        playerName: 'Mark',
-        score: 455
-    }
-];
+
 
 window.onbeforeunload = () => {
     window.localStorage.setItem('highScore', JSON.stringify(highScore));
