@@ -7,6 +7,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:500,500i,700,700i|Londrina+Solid:400,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/gameapp.css">
     <link rel="stylesheet" type="text/css" href="css/transition.css">
     <title>Project GitGrub</title>
 </head>
@@ -15,8 +16,10 @@
     
     <template id="app-template">
         <h1>Project GitGrub</h1>
+        <div class="player-judge">
         <div id="player-display"></div>
         <div id="judge-display"></div>
+        </div>
         <div id="round-display"></div>
         <div id="transition"></div>
         <div id="score-display"></div>
@@ -25,31 +28,30 @@
     <template id="player-display-template">
         <div>
             <h3>PLAYER</h3>
-            <img>
+            <img class="style-player">
         </div>
     </template>
     
     <template id="judge-display-template">
         <div>
             <h3>JUDGE</h3>
-            <img>
+            <img class="style-judge">
         </div>
     </template>
 
     <template id="round-display-template">
-        <img>
-        
+        <img class="style-table">
         <div id="ingredient-selector"></div>
     </template>
 
     <template id="ingredient-selector-template">
-            <div id="recipe-name"></div>
-
-            <div id="ingredient">
-                <button>Submit 🥘</button>
-            </div>
-            <img>
-        </template>
+        <div id="recipe-name">
+        </div>
+        <div id="ingredient">
+        <img class="style-roundbutton">
+        </div>
+        
+    </template>
 
     <template id="ingredient-template">
         <label><img>
@@ -58,24 +60,17 @@
     </template>
 
     <template id="transition-template">
-            <div id = "transition-message-container">
-
-
-                    <div class = "top-lights"></div>
-            
-                    <h2 class = "transition-message">Replace this info with dynamic text from transitions.js and go on to the next round!</h2>
-            
-            
-            
-                        <div class = "bottom-lights"></div>
-                    
-                </div>
+        <div id = "transition-message-container">
+            <div class="top-lights"></div>
+            <h2 class="transition-message">Replace this info with dynamic text from transitions.js and go on to the next round!</h2>
+            <div class="bottom-lights"></div>       
+        </div>
     </template>
     
     <template id="score-display-template">
-        <div>
+        <div class="style-score">
             <h3>Score:</h3>
-            <h2>0</h2>
+            <h2></h2>
         </div>
     </template>
 

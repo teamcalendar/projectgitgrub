@@ -19,23 +19,15 @@ class RoundDisplay {
 
         const itemSelector = this.itemSelectorSection;
         while(itemSelector.lastElementChild) {
-            
-            console.log('hey');
             itemSelector.lastElementChild.remove();
         }
 
         const recipe = pickRandomRecipe(this.recipeList);
-
-
-        
         const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);
   
         itemSelector.appendChild(itemSelectorComponent.render());
-
-
-        //once the submit button is clicked, the page must reload, with a new recipe
         console.log('welcome to round', roundNumber);
-
+        
     }
 
 
