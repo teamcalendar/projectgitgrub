@@ -26,14 +26,14 @@ class Transition {
             this.message = 'Well, that\'s OK to move on but you can do better! Got to step it up in the next round!';
 
         } else if(this.roundNumber === 1 && this.score < 100) {
-            this.message = 'Nice work, you\ve cooked before, but you\re up against real competition in the next round!';
+            this.message = 'Nice work, you\'ve cooked before, but you\'re up against real competition in the next round!';
 
         } else if(this.roundNumber === 1 && this.score <= 150) {
             this.message = 'Amazing! You should be a judge - that\'s a perfect dish!';
         }
 
         if(this.roundNumber === 2 && this.score < 200){
-            this.message = 'You need to step it up if you\re going to stay in this kitchen!! On to the last round!';
+            this.message = 'You need to step it up if you\'re going to stay in this kitchen!! On to the last round!';
 
         } else if(this.roundNumber === 2 && this.score < 250) {
             this.message = 'Fair... OK... Boring!! But good enough to move on to the next round!';
@@ -43,7 +43,7 @@ class Transition {
         }
 
         if(this.roundNumber === 3 && this.score < 350) {
-            this.message = 'Time for you to go home! I don\t think you\re cut out for our Hall of Fame!';
+            this.message = 'Time for you to go home! I don\'t think you\'re cut out for our Hall of Fame!';
             //pushes object into highScoreList array
             highScore.push({
                 playerName: this.playerName,
@@ -60,7 +60,7 @@ class Transition {
             });
             console.log(highScore);
         } else if(this.roundNumber === 3 && this.score <= 450) {
-            this.message = 'You\re among the greats! This dish is sure to put you in our Hall of Fame!';
+            this.message = 'You\'re among the greats! This dish is sure to put you in our Hall of Fame!';
             //pushes object into highScoreList array
             highScore.push({
                 playerName: this.playerName,
