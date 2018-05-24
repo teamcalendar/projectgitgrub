@@ -21,6 +21,9 @@ class Ingredient {
         const input = dom.querySelector('input');
         input.addEventListener('change', () => {
             this.onClick(this.ingredient, input.checked);
+            if(input.checked){
+                image.classList.add('selected-ingredient');
+            } else {image.classList.remove('selected-ingredient');}
         });
         
         return dom;
