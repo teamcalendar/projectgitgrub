@@ -200,36 +200,36 @@ const fullEnglish = new Recipe('Full English',
         new Sausage(30),
         new Bread(30),
         new Bacon(30)
-    ]);    
+    ]);
 
-const benedict = new Recipe('Benedict',    
+const benedict = new Recipe('Benedict',
     [
         new Egg(50),
         new Ham(40),
         new Bread(30),
         new Lemon(20),
         new Potatoes(10)
-    ]);    
+    ]);
 
-const breakfastBurrito = new Recipe('Breakfast Burrito',    
+const breakfastBurrito = new Recipe('Breakfast Burrito',
     [
-        new Egg(50),
-        new Ham(20),
+        new Tortilla(40),
+        new Egg(40),
         new Potatoes(40),
-        new Avocado(20),
+        new Avocado(10),
         new Sausage(20)
-    ]);    
+    ]);
 
-const hash = new Recipe('Hash',    
+const hash = new Recipe('Hash',
     [
         new ButternutSquash(50),
         new Potatoes(30),
         new Mushrooms(30),
         new Onion(20),
         new Bacon(20)
-    ]);    
+    ]);
 
-const breakfast = [omelet, fullEnglish, benedict, breakfastBurrito, hash];    
+const breakfast = [omelet, fullEnglish, benedict, breakfastBurrito, hash];
 
 
 
