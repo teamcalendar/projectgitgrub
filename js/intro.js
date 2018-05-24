@@ -12,6 +12,7 @@ userData[1] = 'user name';
 userData[2] = 1;
 userData[3] = 0;
 
+console.log('userArray', userData[0]);
 
 chefSelect.addEventListener('click', collectChefChoice);
 function collectChefChoice(event) {
@@ -19,25 +20,26 @@ function collectChefChoice(event) {
     var playerChef = event.target.src;
     console.log('chef file:', playerChef);
     userData.splice(0, 1, playerChef);
-
 }
 
 
 var playerName = document.getElementById('player-name');
 playerName.addEventListener('submit', playerNameSubmit);
 function playerNameSubmit(event) {
-    event.preventDefault();
-    var userName = event.target.username.value;
-    userData.splice(1, 1, userName);
 
-    // if(userData[0] === null){
-    //     alert('Please choose a character.');
-    // }
-    console.log('username:', userName);
-    console.log(userData);
-    window.location.replace('gameapp.html');
+    if(userData[0] === 'image location'){
+        event.preventDefault();
+        alert('Please choose a character.');
+    }
+    else {
+        event.preventDefault();
+        var userName = event.target.username.value;
+        userData.splice(1, 1, userName);
+        console.log('username:', userName);
+        console.log(userData);
+        window.location.replace('gameapp.html');
+    }
 }
-
 
 
 
