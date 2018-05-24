@@ -325,7 +325,7 @@ const beefStew = new Recipe('Beef Stew',
         new Mushrooms(20)
     ]);
 
-const chili = new Recipe('chili',
+const chili = new Recipe('Chili',
     [
         new Beef(50),
         new Beans(40),
