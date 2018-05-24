@@ -68,3 +68,22 @@ class Transition {
         this.transitionMessage.textContent = '';
     }
 }
+
+const highScore = [
+    {
+        playerName: 'Zack',
+        score: 451
+    },
+    {
+        playerName: 'Arthur',
+        score: 450
+    },
+    {
+        playerName: 'Mark',
+        score: 455
+    }
+];
+
+window.onbeforeunload = () => {
+    window.localStorage.setItem('highScore', JSON.stringify(highScore));
+};
