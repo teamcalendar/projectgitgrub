@@ -2,8 +2,20 @@
 
 'use strict';
 
-let highScoreList = [];
-
+let highScore = [
+    {
+        playerName: 'Zack',
+        score: 451
+    },
+    {
+        playerName: 'Arthur',
+        score: 450
+    },
+    {
+        playerName: 'Mark',
+        score: 455
+    }
+];
 
 
 const transitionTemplate = document.getElementById('transition-template');
@@ -45,18 +57,28 @@ class Transition {
         if(this.roundNumber === 3 && this.score < 350) {
             this.message = 'Time for you to go home! I don\t think you\re cut out for our Hall of Fame!';
             //pushes object into highScoreList array
-            highScoreList.push(this.playerName, this.score);
+            highScore.push({
+                playerName: this.playerName,
+                score: this.score
+            });
+            console.log(highScore);
 
         } else if(this.roundNumber === 3 && this.score < 400) {
             this.message = 'You may not be the #1 score, but you did yourself proud! Great cooking skills!';
             //pushes object into highScoreList array
-            highScoreList.push(this.playerName, this.score);
-
+            highScore.push({
+                playerName: this.playerName,
+                score: this.score
+            });
+            console.log(highScore);
         } else if(this.roundNumber === 3 && this.score < 450) {
             this.message = 'You\re among the greats! This dish is sure to put you in our Hall of Fame!';
             //pushes object into highScoreList array
-            highScoreList.push(this.playerName, this.score);
-        }
+            highScore.push({
+                playerName: this.playerName,
+                score: this.score
+            });
+            console.log(highScore);        }
         this.transitionMessage = dom.querySelector('h2');
         this.transitionMessage.textContent = this.message;
         return dom;
@@ -69,20 +91,7 @@ class Transition {
     }
 }
 
-const highScore = [
-    {
-        playerName: 'Zack',
-        score: 451
-    },
-    {
-        playerName: 'Arthur',
-        score: 450
-    },
-    {
-        playerName: 'Mark',
-        score: 455
-    }
-];
+
 
 window.onbeforeunload = () => {
     window.localStorage.setItem('highScore', JSON.stringify(highScore));
