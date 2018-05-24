@@ -1,0 +1,23 @@
+body {
+    background-repeat: no-repeat;
+    background-size: 1500px, 1000px;
+}
+.style-player {
+    height: 500px;
+    width: auto;
+}
+.style-judge {
+    height: 500px;
+    width: auto;
+}
+.player-judge {
+    display: flex;
+    justify-content: space-around;
+}
+.style-table {
+    width: 1000px;
+    height: auto;
+}
+.style-roundbutton {
+    cursor: pointer;
+}
