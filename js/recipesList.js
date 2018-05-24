@@ -6,140 +6,140 @@
 
 class Egg {
     constructor(pointValue) {
-        this.image = 'egg.jpg';
+        this.image = 'Egg.png';
         this.pointValue = pointValue;
     }
 }
 
 class Ham {
     constructor(pointValue) {
-        this.image = 'ham.jpg';
+        this.image = 'Ham.png';
         this.pointValue = pointValue;
     }
 }
 
 class Bacon {
     constructor(pointValue) {
-        this.image = 'bacon.jpg';
+        this.image = 'Bacon.png';
         this.pointValue = pointValue;
     }
 }
 
 class Sausage {
     constructor(pointValue) {
-        this.image = 'sausage.jpg';
+        this.image = 'Sausage.png';
         this.pointValue = pointValue;
     }
 }
 
 class Bread {
     constructor(pointValue) {
-        this.image = 'bread.jpg';
+        this.image = 'Bread.png';
         this.pointValue = pointValue;
     }
 }
 
 class Cheese {
     constructor(pointValue) {
-        this.image = 'cheese.jpg';
+        this.image = 'Cheese.png';
         this.pointValue = pointValue;
     }
 }
 
 class Tomatoes {
     constructor(pointValue) {
-        this.image = 'tomatoes.jpg';
+        this.image = 'Tomatoes.png';
         this.pointValue = pointValue;
     }
 }
 
 class Potatoes {
     constructor(pointValue) {
-        this.image = 'potatoes.jpg';
+        this.image = 'Potatoes.png';
         this.pointValue = pointValue;
     }
 }
 
 class ButternutSquash {
     constructor(pointValue) {
-        this.image = 'butternutSquash.jpg';
+        this.image = 'Butternut.png';
         this.pointValue = pointValue;
     }
 }
 
 class Beans {
     constructor(pointValue) {
-        this.image = 'beans.jpg';
+        this.image = 'Beans.png';
         this.pointValue = pointValue;
     }
 }
 
 class Mushrooms {
     constructor(pointValue) {
-        this.image = 'mushrooms.jpg';
+        this.image = 'Mushrooms.png';
         this.pointValue = pointValue;
     }
 }
 
 class Lemon {
     constructor(pointValue) {
-        this.image = 'lemon.jpg';
+        this.image = 'Lemon.png';
         this.pointValue = pointValue;
     }
 }
 
 class Tortilla {
     constructor(pointValue) {
-        this.image = 'tortilla.jpg';
+        this.image = 'Tortillas.png';
         this.pointValue = pointValue;
     }
 }
 
 class Avocado {
     constructor(pointValue) {
-        this.image = 'avocado.jpg';
+        this.image = 'Avocado.png';
         this.pointValue = pointValue;
     }
 }
 
 class Onion {
     constructor(pointValue) {
-        this.image = 'onion.jpg';
+        this.image = 'Onion.png';
         this.pointValue = pointValue;
     }
 }
 
 class Beef {
     constructor(pointValue) {
-        this.image = 'beef.jpg';
+        this.image = 'Beef.png';
         this.pointValue = pointValue;
     }
 }
 
 class Fish {
     constructor(pointValue) {
-        this.image = 'fish.jpg';
+        this.image = 'Fish.png';
         this.pointValue = pointValue;
     }
 }
 
 class Chicken {
     constructor(pointValue) {
-        this.image = 'chicken.jpg';
+        this.image = 'Chicken.png';
         this.pointValue = pointValue;
     }
 }
 
 class Lettuce {
     constructor(pointValue) {
-        this.image = 'lettuce.jpg';
+        this.image = 'Lettuce.png';
         this.pointValue = pointValue;
     }
 }
 
 class Lime {
     constructor(pointValue) {
-        this.image = 'Lime.jpg';
+        this.image = 'Lime.png';
         this.pointValue = pointValue;
     }
 }
