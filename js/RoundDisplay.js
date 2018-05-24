@@ -29,9 +29,9 @@ class RoundDisplay {
         console.log('welcome to round', roundNumber);
         
         if(this.roundNumber === 2) {
-            document.body.style.backgroundImage = 'url(/images/Round2-bg.jpg)';
+            document.body.style.backgroundImage = 'url(images/Round2-bg.jpg)';
         } else if(this.roundNumber === 3) {
-            document.body.style.backgroundImage = 'url(/images/Round3-bg.jpg)';
+            document.body.style.backgroundImage = 'url(images/Round3-bg.jpg)';
         }
     }
 
@@ -40,7 +40,7 @@ class RoundDisplay {
         const dom = roundDisplayTemplate.content.cloneNode(true);
         const recipe = pickRandomRecipe(this.recipeList[this.roundNumber - 1]);
         const tableImage = dom.querySelector('img');
-        tableImage.src = '/images/Table.png';
+        tableImage.src = 'images/Table.png';
 
         this.itemSelectorSection = dom.getElementById('ingredient-selector');
         const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);

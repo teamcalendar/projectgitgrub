@@ -35,7 +35,7 @@ function playerNameSubmit(event) {
     // }
     console.log('username:', userName);
     console.log(userData);
-    window.location.replace('../gameapp.html');
+    window.location.replace('gameapp.html');
 }
 
 

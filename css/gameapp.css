@@ -25,34 +25,37 @@ body {
 .style-table {
     position: absolute;
     width: 1000px;
-    height: 400px;
-    top: 525px;
+    height: 300px;
+    top: 540px;
     left: 0;
     z-index: -1;
 }
 
 .player-name {
     position: absolute;
+    font-family: 'Londrina Solid', cursive;
+    font-weight: 700;
     font-size: 3em;
-    color: rgb(216, 57, 113);
+    color: rgb(248, 218, 109);
     line-height: 1em;
-    text-shadow: 8px 5px 0px rgb(8, 22, 146);
-    -webkit-text-stroke-color: rgb(248, 218, 109);
-    -webkit-text-stroke-width: 3px;
+    text-shadow: 5px 5px 0px #000;
     text-transform: uppercase;
-    left: 50px;
-    top: 80px;
+    left: 150px;
+    top: 480px;
+    z-index: 99;
 }
 .judge-name {
     position: absolute;
+    font-family: 'Londrina Solid', cursive;
+    font-weight: 700;
     font-size: 3em;
-    color: rgb(216, 57, 113);
+    color: rgb(248, 218, 109);
     line-height: 1em;
-    text-shadow: 8px 5px 0px rgb(8, 22, 146);
-    -webkit-text-stroke-color: rgb(248, 218, 109);
-    -webkit-text-stroke-width: 3px;
+    text-shadow: 5px 5px 0px #000;
+    text-transform: uppercase;
     left: 780px;
-    top: 80px;
+    top: 480px;
+    z-index: 99;
 }
 .style-score {
     font-size: 3em;
@@ -89,7 +92,7 @@ body {
     position: absolute;
     width: 1000px;
     left: 50px;
-    top: 550px;
+    top: 500px;
     
 }
 #style-roundbutton {
@@ -97,11 +100,11 @@ body {
     width: 350px;
     cursor: pointer;
     left: 330px;
-    top: 300px;
+    top: 290px;
 }
 .individual-ingredient {
     width: 150px;
-    padding: 15px;
+    padding: 10px;
 }
 .selected-ingredient {
     border: 2px solid white;
