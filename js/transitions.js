@@ -2,20 +2,7 @@
 
 'use strict';
 
-let highScore = [
-    {
-        playerName: 'Zack',
-        score: 451
-    },
-    {
-        playerName: 'Arthur',
-        score: 450
-    },
-    {
-        playerName: 'Mark',
-        score: 455
-    }
-];
+let highScore = [];
 
 
 const transitionTemplate = document.getElementById('transition-template');
@@ -40,7 +27,7 @@ class Transition {
         } else if(this.roundNumber === 1 && this.score < 100) {
             this.message = 'Nice work, you\ve cooked before, but you\re up against real competition in the next round!';
 
-        } else if(this.roundNumber === 1 && this.score < 150) {
+        } else if(this.roundNumber === 1 && this.score <= 150) {
             this.message = 'Amazing! You should be a judge - that\'s a perfect dish!';
         }
 
@@ -50,7 +37,7 @@ class Transition {
         } else if(this.roundNumber === 2 && this.score < 250) {
             this.message = 'Fair... OK... Boring!! But good enough to move on to the next round!';
 
-        } else if(this.roundNumber === 2 && this.score < 300) {
+        } else if(this.roundNumber === 2 && this.score <= 300) {
             this.message = 'Are you sure you aren\'t a professional? This dish is fantastic! Now go take on the final round!';
         }
 
@@ -71,7 +58,7 @@ class Transition {
                 score: this.score
             });
             console.log(highScore);
-        } else if(this.roundNumber === 3 && this.score < 450) {
+        } else if(this.roundNumber === 3 && this.score <= 450) {
             this.message = 'You\re among the greats! This dish is sure to put you in our Hall of Fame!';
             //pushes object into highScoreList array
             highScore.push({
