@@ -69,7 +69,7 @@ class GameApp {
                 userArrayParse[2] = this.roundNumber;
                 userArrayParse[3] = this.score;
                 this.roundDisplayComponent.update(this.roundNumber);
-            }, 3000);
+            }, 4500);
         });
         roundDisplaySection.appendChild(this.roundDisplayComponent.render());
         

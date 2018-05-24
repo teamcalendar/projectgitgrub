@@ -16,7 +16,7 @@ class JudgeDisplay {
         const roundScore = Math.abs(this.score - score);
         this.score = score;
 
-        if(roundScore < 50) {
+        if(roundScore < 75) {
             this.judgeState = './images/Judge-sad.png';
         }
         else if(roundScore < 100) {
