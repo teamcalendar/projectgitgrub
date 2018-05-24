@@ -1,37 +1,40 @@
 /* exported GameApp */
 /* globals PlayerDisplay, JudgeDisplay, RoundDisplay, Transition, ScoreDisplay */
-
 'use strict';
+
+window.onbeforeunload = () => {
+    window.localStorage.setItem('highScore', JSON.stringify(highScore));
+    window.localStorage.setItem('userData', JSON.stringify(userArrayParse));
+    
+};
+
+
 
 const userArray = window.localStorage.getItem('userData');
 const userArrayParse = JSON.parse(userArray);
 const chefSelect = userArrayParse[0];
 const playerName = userArrayParse[1];
+const roundNumber = userArrayParse[2];
+const score = userArrayParse[3];
 console.log('user array info:', userArrayParse);
 
 const appTemplate = document.getElementById('app-template');
 
 
-
-
 class GameApp {
     constructor() {
-        this.roundNumber = 1;
-        this.score = 0;
+        this.roundNumber = roundNumber;
+        this.score = score;
         this.playerName = playerName;
         this.chefSelect = chefSelect;
         
-        
-    }
-    
-    nextRound() {
-        console.log('3 seconds have passed', this.transitionComponent);
-        this.transitionComponent.clearTransitionMessage();
-        this.roundNumber ++;
-        this.roundDisplayComponent.update(this.roundNumber);
     }
     
     render() {
+
+        userArrayParse[2] = this.roundNumber;
+        userArrayParse[3] = this.score;
+        console.log(userArrayParse);
         const dom = appTemplate.content;
         
         document.body.style.backgroundImage = 'url(/images/Round1-bg.jpg)';
@@ -63,6 +66,8 @@ class GameApp {
                     window.location.href = 'hiscores.html';
                 }
                 this.roundNumber++;
+                userArrayParse[2] = this.roundNumber;
+                userArrayParse[3] = this.score;
                 this.roundDisplayComponent.update(this.roundNumber);
             }, 3000);
         });
