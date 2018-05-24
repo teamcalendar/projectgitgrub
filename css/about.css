@@ -6,7 +6,7 @@ body {
 
 #about-body {
     display: block;
-    background-color: #6f8695;
+   
     
 }
 
@@ -61,7 +61,7 @@ h2 {
 .dev-box {
     display: block;
     margin: 7px;
-
+   
     background: rgb(206, 206, 206);
     
     padding: 20px 10px 10px 10px;
