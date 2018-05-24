@@ -15,26 +15,24 @@
     <div id="root"></div>
     
     <template id="app-template">
-        <h1>Project GitGrub</h1>
-        <div class="player-judge">
+        <h1 class="main-title">Project GitGrub</h1>
         <div id="player-display"></div>
+        <div id="score-display"></div>
         <div id="judge-display"></div>
-        </div>
         <div id="round-display"></div>
         <div id="transition"></div>
-        <div id="score-display"></div>
     </template>
 
     <template id="player-display-template">
         <div>
-            <h3>PLAYER</h3>
+            <h3 class="player-name">PLAYER</h3>
             <img class="style-player">
         </div>
     </template>
     
     <template id="judge-display-template">
         <div>
-            <h3>JUDGE</h3>
+            <h3 class="judge-name">JUDGE</h3>
             <img class="style-judge">
         </div>
     </template>
@@ -48,7 +46,7 @@
         <div id="recipe-name">
         </div>
         <div id="ingredient">
-        <img class="style-roundbutton">
+        <img id="style-roundbutton">
         </div>
         
     </template>
@@ -68,8 +66,8 @@
     </template>
     
     <template id="score-display-template">
-        <div class="style-score">
-            <h3>Score:</h3>
+        <div>
+            <h3 class="style-score">Score:</h3>
             <h2></h2>
         </div>
     </template>
