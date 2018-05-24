@@ -59,12 +59,13 @@ class IngredientSelectorDisplay {
         }
         // const submitButton = dom.querySelector('button');
 
-        const addRoundButton = dom.querySelector('img');
-        addRoundButton.src = '/images/Roundbutton.png';
+        this.submitButton = dom.querySelector('img');
+        this.submitButton.src = '/images/Roundbutton.png';
 
-        addRoundButton.addEventListener('click', () => {
+        this.submitButton.addEventListener('click', () => {
             // event.preventDefault;
             this.onSubmit(this.roundScore);
+            this.submitButton.style.display = 'none';
         });
         return dom;
     }

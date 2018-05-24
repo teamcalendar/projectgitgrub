@@ -54,6 +54,7 @@ class GameApp {
         
         const roundDisplaySection = dom.getElementById('round-display');
         this.roundDisplayComponent = new RoundDisplay(this.roundNumber, this.score, this.playerName, (roundScore) => {
+            
             this.score += roundScore;
             this.scoreDisplayComponent.update(this.score);
             // update judge display based on score
