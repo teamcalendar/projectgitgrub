@@ -53,6 +53,8 @@ for(var i = 0; i < highScoresArray.length; i++) {
     tRow.appendChild(child2);
 }
 
+
+
 //reset high-scores function
 let clearHighScoresArray = function(){
     selectTableBody.remove();
