@@ -1,5 +1,4 @@
 
-
 window.onbeforeunload = () => {
     window.localStorage.setItem('userData', JSON.stringify(userData));
 };
@@ -20,6 +19,7 @@ function collectChefChoice(event) {
     var playerChef = event.target.src;
     console.log('chef file:', playerChef);
     userData.splice(0, 1, playerChef);
+
 }
 
 
@@ -29,10 +29,15 @@ function playerNameSubmit(event) {
     event.preventDefault();
     var userName = event.target.username.value;
     userData.splice(1, 1, userName);
+
+    // if(userData[0] === null){
+    //     alert('Please choose a character.');
+    // }
     console.log('username:', userName);
     console.log(userData);
     window.location.replace('../gameapp.html');
 }
+
 
 
 
