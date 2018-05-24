@@ -47,8 +47,8 @@ class GameApp {
         playerDisplaySection.appendChild(playerDisplayComponent.render());
         
         const judgeDisplaySection = dom.getElementById('judge-display');
-        const judgeDisplayComponent = new JudgeDisplay(this.score);
-        judgeDisplaySection.appendChild(judgeDisplayComponent.render());
+        this.judgeDisplayComponent = new JudgeDisplay(this.score);
+        judgeDisplaySection.appendChild(this.judgeDisplayComponent.render());
 
         const transitionSection = dom.getElementById('transition');
         
@@ -57,10 +57,8 @@ class GameApp {
             
             this.score += roundScore;
             this.scoreDisplayComponent.update(this.score);
-            // update judge display based on score
+            this.judgeDisplayComponent.update(this.score);
             
-            //trigger a transition
-            // console.log(transitionSection);
             this.transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
             transitionSection.appendChild(this.transitionComponent.render());
             
