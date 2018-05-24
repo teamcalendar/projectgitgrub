@@ -11,13 +11,13 @@
     <title>Project GitGrub Intro Instructions Page</title>
 </head>
 <body>
-    <h1>Welcome to the GitGrub Competition!</h1>
+    <h1>Welcome to the <span class = "main-title">GitGrub</span> Competition!</h1>
     <h2>Please Choose Your Character:</h2>
 
    
     <form id="chef-select">
-        <input type="image" src="../images/male.png" name="user-chef-male" class="user-chef-male" id="male"/>
-        <input type="image" src="../images/female.png" name="user-chef-female" class="user-chef-female" id="female"/>
+        <input type="image" src="./images/male.png" name="user-chef-male" class="user-chef-male" id="male"/>
+        <input type="image" src="./images/female.png" name="user-chef-female" class="user-chef-female" id="female"/>
     </form>
     
     
@@ -26,14 +26,19 @@
         <p>Over the next three rounds of the tournament your goal is to create the best dish possible out of a specific selection of ingredients.</p>
         <p>The judge will decide what dish you need to make, and you will need to choose the food items to complete that task.</p>
         <p>Each item will contribute to your High Score, awarding more or less points depending on how well they fit the Judge's tastes.</p> 
-        <h2>Good Luck!</h2>
-    </div>
-    <p></p>
-    <h3>Please Register Your Name:</h3>
+        <p></p>
+    <h2>Please Enter Your Name:</h2>
+    <div id="flex-grid">
+        <div id="row">
     <form id ="player-name">
         <input type="text" name="username">
-        <input type="submit" value="submit">
+        <input type="submit" value="Start Game!">
     </form>
-    <script src = "js/intro.js"></script>
+    </div>
+    </div>
+        <h2>Good Luck!</h2>
+    </div>
+    
+    <script src = "./js/intro.js"></script>
 </body>
 </html>

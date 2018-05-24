@@ -1,5 +1,5 @@
 /* exported IngredientSelectorDisplay */
-/* globals Ingredient, getRandomInt, breakfastIngredients */
+/* globals Ingredient, getRandomInt, allIngredients */
 
 'use strict';
 
@@ -8,7 +8,7 @@ const ingredientSelectorTemplate = document.getElementById('ingredient-selector-
 class IngredientSelectorDisplay {
     constructor(recipe, onSubmit) {
         this.recipe = recipe;
-        this.allIngredients = breakfastIngredients;
+        this.allIngredients = allIngredients;
         this.onSubmit = onSubmit;
         this.roundScore = 0;
     }
@@ -59,12 +59,13 @@ class IngredientSelectorDisplay {
         }
         // const submitButton = dom.querySelector('button');
 
-        const addRoundButton = dom.querySelector('img');
-        addRoundButton.src = '/images/Roundbutton.png';
+        this.submitButton = dom.querySelector('img');
+        this.submitButton.src = '/images/Roundbutton.png';
 
-        addRoundButton.addEventListener('click', () => {
+        this.submitButton.addEventListener('click', () => {
             // event.preventDefault;
             this.onSubmit(this.roundScore);
+            this.submitButton.style.display = 'none';
         });
         return dom;
     }

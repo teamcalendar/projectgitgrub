@@ -43,7 +43,7 @@
     </template>
 
     <template id="ingredient-selector-template">
-        <div id="recipe-name">
+        <div id="recipe-name" class="flex-grid">
         </div>
         <img id="style-roundbutton">
         <div id="ingredient">
@@ -58,21 +58,23 @@
     </template>
 
     <template id="transition-template">
-        <div id = "transition-message-container">
-            <div class="top-lights"></div>
-            <h2 class="transition-message">Replace this info with dynamic text from transitions.js and go on to the next round!</h2>
-            <div class="bottom-lights"></div>       
-        </div>
+        <section>
+            <div id = "transition-message-container">
+                <div class="top-lights"></div>
+                <h2 class="transition-message"></h2>
+                <div class="bottom-lights"></div>       
+            </div>
+        </section>
     </template>
     
     <template id="score-display-template">
-        <div>
+        <div id="score-container">
             <h3 class="style-score">Score:</h3>
             <h2></h2>
         </div>
     </template>
 
-    <script src = "js/breakfastList.js"></script>
+    <script src = "js/recipesList.js"></script>
     <script src = "js/ScoreDisplay.js"></script>
     <script src = "js/transitions.js"></script>
     <script src = "js/Ingredient.js"></script>

@@ -21,12 +21,13 @@ class Transition {
         //if statement selects proper transition message based on score and round
         const dom = transitionTemplate.content.cloneNode(true);
         this.messageContainer = dom.getElementById('transition-message-container');
+        this.messageSection = dom.querySelector('section');
         if(this.roundNumber === 1 && this.score < 50){
             this.message = 'Well, that\'s OK to move on but you can do better! Got to step it up in the next round!';
 
         } else if(this.roundNumber === 1 && this.score < 100) {
-            this.message = 'Nice work, you\ve cooked before, but you\re up against real competition in the next round!';
-            
+            this.message = 'Nice work, you\'ve cooked before, but you\'re up against real competition in the next round!';
+
         } else if(this.roundNumber === 1 && this.score <= 150) {
             this.message = 'Amazing! You should be a judge - that\'s a perfect dish!';
         }
@@ -42,7 +43,7 @@ class Transition {
         }
         
         if(this.roundNumber === 3 && this.score < 350) {
-            this.message = 'Time for you to go home! I don\'t think you\re cut out for our Hall of Fame!';
+            this.message = 'Time for you to go home! I don\'t think you\'re cut out for our Hall of Fame!';
             //pushes object into highScoreList array
             highScore.push({
                 playerName: this.playerName,
@@ -59,7 +60,7 @@ class Transition {
             });
             console.log(highScore);
         } else if(this.roundNumber === 3 && this.score <= 450) {
-            this.message = 'You\re among the greats! This dish is sure to put you in our Hall of Fame!';
+            this.message = 'You\'re among the greats! This dish is sure to put you in our Hall of Fame!';
             //pushes object into highScoreList array
             highScore.push({
                 playerName: this.playerName,
@@ -72,8 +73,10 @@ class Transition {
         return dom;
     }
     clearTransitionMessage() {
-        while(this.messageContainer.lastElementChild) {
-            this.messageContainer.lastElementChild.remove();
+
+        
+        while(this.messageSection.lastElementChild) {
+            this.messageSection.lastElementChild.remove();
         }
         this.transitionMessage.textContent = ''; 
     }

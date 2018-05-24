@@ -1,5 +1,5 @@
 /* exported RoundDisplay */
-/* globals IngredientSelectorDisplay, breakfast */
+/* globals IngredientSelectorDisplay, allRecipes */
 
 'use strict';
 
@@ -7,7 +7,7 @@ const roundDisplayTemplate = document.getElementById('round-display-template');
 
 class RoundDisplay {
     constructor(roundNumber, score, playerName, onSubmit) {
-        this.recipeList = breakfast;
+        this.recipeList = allRecipes;
         this.roundNumber = roundNumber;
         this.score = score;
         this.playerName = playerName;
@@ -22,18 +22,23 @@ class RoundDisplay {
             itemSelector.lastElementChild.remove();
         }
 
-        const recipe = pickRandomRecipe(this.recipeList);
+        const recipe = pickRandomRecipe(this.recipeList[this.roundNumber - 1]);
         const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);
   
         itemSelector.appendChild(itemSelectorComponent.render());
         console.log('welcome to round', roundNumber);
         
+        if(this.roundNumber === 2) {
+            document.body.style.backgroundImage = 'url(/images/Round2-bg.jpg)';
+        } else if(this.roundNumber === 3) {
+            document.body.style.backgroundImage = 'url(/images/Round3-bg.jpg)';
+        }
     }
 
 
     render() {
         const dom = roundDisplayTemplate.content.cloneNode(true);
-        const recipe = pickRandomRecipe(this.recipeList);
+        const recipe = pickRandomRecipe(this.recipeList[this.roundNumber - 1]);
         const tableImage = dom.querySelector('img');
         tableImage.src = '/images/Table.png';
 
