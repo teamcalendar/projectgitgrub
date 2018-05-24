@@ -10,6 +10,9 @@ var chefSelect = document.getElementById('chef-select');
 var userData = [];
 userData[0] = 'image location';
 userData[1] = 'user name';
+userData[2] = 1;
+userData[3] = 0;
+
 
 chefSelect.addEventListener('click', collectChefChoice);
 function collectChefChoice(event) {
