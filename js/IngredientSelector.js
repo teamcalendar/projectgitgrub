@@ -11,6 +11,7 @@ class IngredientSelectorDisplay {
         this.allIngredients = allIngredients;
         this.onSubmit = onSubmit;
         this.roundScore = 0;
+        this.checkedIngredients = 0;
     }
 
     render() {
@@ -50,22 +51,26 @@ class IngredientSelectorDisplay {
             const ingredientSelectorComponent = new Ingredient(arrayOf10Ingredients[i], (ingredient, statusChange) => {
                 if(statusChange === true) {
                     this.roundScore += ingredient.pointValue;
+                    this.checkedIngredients++;
                     console.log(ingredient.constructor.name, 'is selected');
                 } else {
                     this.roundScore -= ingredient.pointValue;
+                    this.checkedIngredients--;
                 }
             });
             ingredientSelectorSection.appendChild(ingredientSelectorComponent.render());
         }
-        // const submitButton = dom.querySelector('button');
 
         this.submitButton = dom.querySelector('img');
         this.submitButton.src = 'images/Roundbutton.png';
-
         this.submitButton.addEventListener('click', () => {
-            // event.preventDefault;
-            this.onSubmit(this.roundScore);
-            this.submitButton.style.display = 'none';
+            if(this.checkedIngredients > 5) {
+                alert('You\'re using too many ingredients! Select up to 5.');
+            }
+            else {
+                this.onSubmit(this.roundScore);
+                this.submitButton.style.display = 'none';
+            }
         });
         return dom;
     }
