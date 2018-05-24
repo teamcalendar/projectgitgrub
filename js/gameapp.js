@@ -35,20 +35,15 @@ class GameApp {
         const dom = appTemplate.content;
         
         document.body.style.backgroundImage = 'url(/images/Round1-bg.jpg)';
-        console.log('roundNumber is:', this.roundNumber);
-        if(this.roundNumber === 2) {
-            document.body.style.backgroundImage = 'url(/images/Round2-bg.jpg)';
-        } else if(this.roundNumber === 3) {
-            document.body.style.backgroundImage = 'url(/images/Round3-bg.jpg)';
-        }
+        
 
         const playerDisplaySection = dom.getElementById('player-display');
         const playerDisplayComponent = new PlayerDisplay(this.playerName, this.chefSelect);
         playerDisplaySection.appendChild(playerDisplayComponent.render());
         
         const judgeDisplaySection = dom.getElementById('judge-display');
-        const judgeDisplayComponent = new JudgeDisplay(this.score);
-        judgeDisplaySection.appendChild(judgeDisplayComponent.render());
+        this.judgeDisplayComponent = new JudgeDisplay(this.score);
+        judgeDisplaySection.appendChild(this.judgeDisplayComponent.render());
 
         const transitionSection = dom.getElementById('transition');
         
@@ -57,10 +52,8 @@ class GameApp {
             
             this.score += roundScore;
             this.scoreDisplayComponent.update(this.score);
-            // update judge display based on score
+            this.judgeDisplayComponent.update(this.score);
             
-            //trigger a transition
-            // console.log(transitionSection);
             this.transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
             transitionSection.appendChild(this.transitionComponent.render());
             
