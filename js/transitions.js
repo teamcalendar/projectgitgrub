@@ -21,6 +21,7 @@ class Transition {
         //if statement selects proper transition message based on score and round
         const dom = transitionTemplate.content.cloneNode(true);
         this.messageContainer = dom.getElementById('transition-message-container');
+        this.messageSection = dom.querySelector('section');
         if(this.roundNumber === 1 && this.score < 50){
             this.message = 'Well, that\'s OK to move on but you can do better! Got to step it up in the next round!';
 
@@ -71,8 +72,10 @@ class Transition {
         return dom;
     }
     clearTransitionMessage() {
-        while(this.messageContainer.lastElementChild) {
-            this.messageContainer.lastElementChild.remove();
+
+        
+        while(this.messageSection.lastElementChild) {
+            this.messageSection.lastElementChild.remove();
         }
         this.transitionMessage.textContent = '';
     }
