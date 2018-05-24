@@ -31,7 +31,7 @@ function playerNameSubmit(event) {
     userData.splice(1, 1, userName);
     console.log('username:', userName);
     console.log(userData);
-    window.location.replace('../gameapp.html');
+    window.location.replace('gameapp.html');
 }
 
 
