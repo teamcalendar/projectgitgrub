@@ -1,4 +1,3 @@
-console.log('highscore.js is loading properly');
 'use strict';
 /* exported clearHighScoresArray */
 
@@ -9,12 +8,12 @@ highScoreData = JSON.parse(highScoreData);
 
 // sort array on score (high to low)
 
-function bubbleSort(array, property) {
+function bubbleSort(array, prop) {
     let swapped = true;
     while(swapped === true) {
         swapped = false;
         for(let i = 1; i < array.length; i++) {
-            if(array[i - 1].property < array[i].property) {
+            if(array[i - 1][prop] < array[i][prop]) {
                 let temp;
                 temp = array[i];
                 array[i] = array[i - 1];
@@ -26,7 +25,7 @@ function bubbleSort(array, property) {
     return array;
 }
 
-bubbleSort(highScoreData, this.score);
+bubbleSort(highScoreData, 'score');
 console.log(highScoreData);
 
 // render array items to table
