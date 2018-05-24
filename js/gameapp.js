@@ -37,7 +37,7 @@ class GameApp {
         console.log(userArrayParse);
         const dom = appTemplate.content;
         
-        document.body.style.backgroundImage = 'url(images/Round1-bg.jpg)';
+        document.getElementById('root').style.backgroundImage = 'url(images/Round1-bg.jpg)';
         
 
         const playerDisplaySection = dom.getElementById('player-display');
