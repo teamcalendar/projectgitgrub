@@ -35,12 +35,7 @@ class GameApp {
         const dom = appTemplate.content;
         
         document.body.style.backgroundImage = 'url(/images/Round1-bg.jpg)';
-        console.log('roundNumber is:', this.roundNumber);
-        if(this.roundNumber === 2) {
-            document.body.style.backgroundImage = 'url(/images/Round2-bg.jpg)';
-        } else if(this.roundNumber === 3) {
-            document.body.style.backgroundImage = 'url(/images/Round3-bg.jpg)';
-        }
+        
 
         const playerDisplaySection = dom.getElementById('player-display');
         const playerDisplayComponent = new PlayerDisplay(this.playerName, this.chefSelect);
