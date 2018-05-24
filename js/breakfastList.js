@@ -161,7 +161,8 @@ class Recipe {
 // BREAKFAST RECIPES
 
 const omelet = new Recipe('Omelet',
-    [new Egg(50),
+    [
+        new Egg(50),
         new Ham(30),
         new Cheese(30),
         new Bacon(20),
@@ -169,7 +170,8 @@ const omelet = new Recipe('Omelet',
     ]);
         
 const fullEnglish = new Recipe('Full English',
-    [new Egg(30),
+    [
+        new Egg(30),
         new Beans(30),
         new Sausage(30),
         new Bread(30),
@@ -177,7 +179,8 @@ const fullEnglish = new Recipe('Full English',
     ]);
 
 const benedict = new Recipe('Benedict',
-    [new Egg(50),
+    [
+        new Egg(50),
         new Ham(40),
         new Bread(30),
         new Lemon(20),
@@ -185,7 +188,8 @@ const benedict = new Recipe('Benedict',
     ]);
 
 const breakfastBurrito = new Recipe('Breakfast Burrito',
-    [new Egg(50),
+    [
+        new Egg(50),
         new Ham(20),
         new Potatoes(40),
         new Avocado(20),
@@ -193,7 +197,8 @@ const breakfastBurrito = new Recipe('Breakfast Burrito',
     ]);
 
 const hash = new Recipe('Hash',
-    [new ButternutSquash(50),
+    [
+        new ButternutSquash(50),
         new Potatoes(30),
         new Mushrooms(30),
         new Onion(20),
@@ -202,7 +207,7 @@ const hash = new Recipe('Hash',
 
 const breakfast = [omelet, fullEnglish, benedict, breakfastBurrito, hash];
 
-const breakfastIngredients = [
+const allIngredients = [
     new Egg(0),
     new Ham(0),
     new Bacon(0),
@@ -217,9 +222,13 @@ const breakfastIngredients = [
     new Lemon(0),
     new Tortilla(0),
     new Avocado(0),
-    new Onion(0)
+    new Onion(0),
+    new Beef(0),
+    new Chicken(0),
+    new Fish(0),
+    new Lettuce(0),
+    new Lime(0)
 ];
-
 
 
 
@@ -232,7 +241,8 @@ const breakfastIngredients = [
 // LUNCH RECIPES
 
 const tacos = new Recipe('Carne Asada Tacos',
-    [new Tortilla(50),
+    [
+        new Tortilla(50),
         new Beef(40),
         new Onion(20),
         new Cheese(20),
@@ -240,7 +250,8 @@ const tacos = new Recipe('Carne Asada Tacos',
     ]);
     
 const salad = new Recipe('Cobb Salad',
-    [new Lettuce(40),
+    [
+        new Lettuce(40),
         new Tomatoes(30),
         new Bacon(30),
         new Egg(30),
@@ -248,7 +259,8 @@ const salad = new Recipe('Cobb Salad',
     ]);
 
 const ceviche = new Recipe('Ceviche',
-    [new Fish(50),
+    [
+        new Fish(50),
         new Lime(40),
         new Onion(30),
         new Tomatoes(20),
@@ -256,7 +268,8 @@ const ceviche = new Recipe('Ceviche',
     ]);
 
 const hamburger = new Recipe('Hamburger',
-    [new Beef(50),
+    [
+        new Beef(50),
         new Bread(40),
         new Lettuce(30),
         new Tomatoes(20),
@@ -264,7 +277,8 @@ const hamburger = new Recipe('Hamburger',
     ]);
     
 const nachos = new Recipe('Nachos',
-    [new Tortilla(50),
+    [
+        new Tortilla(50),
         new Cheese(40),
         new Beans(30),
         new Tomatoes(20),
@@ -272,30 +286,24 @@ const nachos = new Recipe('Nachos',
     ]);
     
 const lunch = [tacos, salad, ceviche, hamburger, nachos];
-const lunchIngredients = [
-    new Lettuce(0),
-    new Tomatoes(0),
-    new Bacon(0),
-    new Egg(0),
-    new Avocado(0),
-    new Fish(0),
-    new Lime(0),
-    new Onion(0),
-    new Tortilla(0),
-    new Beef(0),
-    new Bread(0),
-    new Cheese(0),
-    new Beans(0)
-];
-
 
 
 // DINNER RECIPES
 
 const chickenSandwich = new Recipe('Chicken Sandwich',
-    [new Chicken(50),
+    [
+        new Chicken(50),
         new Bread(40),
-        new Lettuce(30)
-        
+        new Lettuce(30),
+        new Tomatoes(20),
+        new Cheese(10)
+    ]);
 
+const stirfry = new Recipe('',
+    [
+        new Bread(10),
+        new Cheese(10),
+        new Tomatoes(9),
+        new Basil(9),
+        new Mushrooms(7)
     ]);
