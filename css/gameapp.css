@@ -1,23 +1,85 @@
+
 body {
+    max-width: 1000px;
     background-repeat: no-repeat;
-    background-size: 1500px, 1000px;
+    background-size: 1000px, 900px;
 }
 .style-player {
+    position: absolute;
     height: 500px;
-    width: auto;
+    width: 300px;
+    top: 100px;
+    left: 20px;
+    z-index: -2;
 }
 .style-judge {
+    position: absolute;
     height: 500px;
-    width: auto;
+    width: 300px;
+    top: 100px;
+    left: 700px;
+    z-index: -2;
+    
 }
-.player-judge {
-    display: flex;
-    justify-content: space-around;
-}
+
 .style-table {
+    position: absolute;
     width: 1000px;
-    height: auto;
+    height: 400px;
+    top: 525px;
+    left: 0;
+    z-index: -1;
 }
-.style-roundbutton {
+
+.player-name {
+    position: absolute;
+    font-size: 3em;
+    color: rgb(216, 57, 113);
+    line-height: 1em;
+    text-shadow: 8px 5px 0px rgb(8, 22, 146);
+    -webkit-text-stroke-color: rgb(248, 218, 109);
+    -webkit-text-stroke-width: 3px;
+    left: 50px;
+    top: 80px;
+}
+.judge-name {
+    position: absolute;
+    font-size: 3em;
+    color: rgb(216, 57, 113);
+    line-height: 1em;
+    text-shadow: 8px 5px 0px rgb(8, 22, 146);
+    -webkit-text-stroke-color: rgb(248, 218, 109);
+    -webkit-text-stroke-width: 3px;
+    left: 780px;
+    top: 80px;
+}
+.style-score {
+    font-size: 3em;
+    font-family: 'Londrina Solid', cursive;
+    font-weight: 900;
+    color: rgb(216, 57, 113);
+    text-align: center;
+    margin-bottom: -25px;
+}
+#recipe-name {
+    position: absolute;
+    font-size: 3em;
+    color: rgb(216, 57, 113);
+    line-height: 1em;
+    text-shadow: 8px 5px 0px rgb(8, 22, 146);
+    -webkit-text-stroke-color: rgb(248, 218, 109);
+    -webkit-text-stroke-width: 3px;
+    left: 430px;
+    top: 300px;
+    z-index: 4;
+}
+#ingredient {
+    
+}
+#style-roundbutton {
+    position: absolute;
+    width: 350px;
     cursor: pointer;
+    left: 330px;
+    top: 300px;
 }
