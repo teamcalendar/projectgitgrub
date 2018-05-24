@@ -3,6 +3,7 @@
 
 let highScoreData = window.localStorage.getItem('highScore');
 highScoreData = JSON.parse(highScoreData);
+console.log(highScoreData);
 
 
 
@@ -49,6 +50,9 @@ for(var i = 0; i < highScoreData.length; i++) {
 
 //reset high-scores function
 let clearHighScoresArray = function(){
-    selectTableBody.remove();
-    // highScoresArray = 0;
+    //if we use the below method
+    //selectTableBody.remove(); 
+    //it does not clear the scores array, just the table
+    //when page is reloaded, score will come back, hence ->
+    highScoresArray = 0;
 };
