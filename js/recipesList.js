@@ -1,4 +1,4 @@
-/* exported breakfast, breakfastIngredients */
+/* exported allRecipes, allIngredients */
 'use strict';
 
 
@@ -156,57 +156,6 @@ class Recipe {
 }
 
 
-
-
-// BREAKFAST RECIPES
-
-const omelet = new Recipe('Omelet',
-    [
-        new Egg(50),
-        new Ham(30),
-        new Cheese(30),
-        new Bacon(20),
-        new Avocado(20)
-    ]);
-        
-const fullEnglish = new Recipe('Full English',
-    [
-        new Egg(30),
-        new Beans(30),
-        new Sausage(30),
-        new Bread(30),
-        new Bacon(30)
-    ]);
-
-const benedict = new Recipe('Benedict',
-    [
-        new Egg(50),
-        new Ham(40),
-        new Bread(30),
-        new Lemon(20),
-        new Potatoes(10)
-    ]);
-
-const breakfastBurrito = new Recipe('Breakfast Burrito',
-    [
-        new Egg(50),
-        new Ham(20),
-        new Potatoes(40),
-        new Avocado(20),
-        new Sausage(20)
-    ]);
-
-const hash = new Recipe('Hash',
-    [
-        new ButternutSquash(50),
-        new Potatoes(30),
-        new Mushrooms(30),
-        new Onion(20),
-        new Bacon(20)
-    ]);
-
-const breakfast = [omelet, fullEnglish, benedict, breakfastBurrito, hash];
-
 const allIngredients = [
     new Egg(0),
     new Ham(0),
@@ -230,6 +179,57 @@ const allIngredients = [
     new Lime(0)
 ];
 
+
+
+
+// BREAKFAST RECIPES
+
+const omelet = new Recipe('Omelet',
+    [
+        new Egg(50),
+        new Ham(30),
+        new Cheese(30),
+        new Bacon(20),
+        new Avocado(20)
+    ]);
+        
+const fullEnglish = new Recipe('Full English',
+    [
+        new Egg(30),
+        new Beans(30),
+        new Sausage(30),
+        new Bread(30),
+        new Bacon(30)
+    ]);    
+
+const benedict = new Recipe('Benedict',    
+    [
+        new Egg(50),
+        new Ham(40),
+        new Bread(30),
+        new Lemon(20),
+        new Potatoes(10)
+    ]);    
+
+const breakfastBurrito = new Recipe('Breakfast Burrito',    
+    [
+        new Egg(50),
+        new Ham(20),
+        new Potatoes(40),
+        new Avocado(20),
+        new Sausage(20)
+    ]);    
+
+const hash = new Recipe('Hash',    
+    [
+        new ButternutSquash(50),
+        new Potatoes(30),
+        new Mushrooms(30),
+        new Onion(20),
+        new Bacon(20)
+    ]);    
+
+const breakfast = [omelet, fullEnglish, benedict, breakfastBurrito, hash];    
 
 
 
@@ -299,11 +299,42 @@ const chickenSandwich = new Recipe('Chicken Sandwich',
         new Cheese(10)
     ]);
 
-const stirfry = new Recipe('',
+const caesarSalad = new Recipe('Caesar Salad',
     [
-        new Bread(10),
-        new Cheese(10),
-        new Tomatoes(9),
-        new Basil(9),
-        new Mushrooms(7)
+        new Lettuce(50),
+        new Chicken(40),
+        new Fish(30),
+        new Bread(20),
+        new Bacon(10)
     ]);
+const cheeseburger = new Recipe('Cheeseburger',
+    [
+        new Beef(50),
+        new Bread(30),
+        new Cheese(30),
+        new Lettuce(20),
+        new Tomatoes(20)
+    ]);
+    
+const beefStew = new Recipe('Beef Stew',
+    [
+        new Beef(50),
+        new Onion(30),
+        new Potatoes(30),
+        new ButternutSquash(20),
+        new Mushrooms(20)
+    ]);
+
+const chili = new Recipe('chili',
+    [
+        new Beef(50),
+        new Beans(40),
+        new Tomatoes(30),
+        new Cheese(20),
+        new Onion(10)
+    ]);
+
+
+const dinner = [chickenSandwich, caesarSalad, cheeseburger, beefStew, chili];
+
+const allRecipes = [breakfast, lunch, dinner];
