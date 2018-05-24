@@ -87,3 +87,16 @@ input[type="submit"]:active {
     position: relative;
     top: 2px;
 }
+h2 {
+    -webkit-margin-after: 0px;
+}
+
+.main-title {
+    color: rgb(216, 57, 113);
+    line-height: 1em;
+    text-shadow: 8px 5px 0px rgb(8, 22, 146);
+    -webkit-text-stroke-color: rgb(248, 218, 109);
+    -webkit-text-stroke-width: 3px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
