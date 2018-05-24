@@ -16,8 +16,8 @@ class Transition {
     }
     
     render() {
-
-
+        
+        
         //if statement selects proper transition message based on score and round
         const dom = transitionTemplate.content.cloneNode(true);
         this.messageContainer = dom.getElementById('transition-message-container');
@@ -26,21 +26,21 @@ class Transition {
 
         } else if(this.roundNumber === 1 && this.score < 100) {
             this.message = 'Nice work, you\ve cooked before, but you\re up against real competition in the next round!';
-
+            
         } else if(this.roundNumber === 1 && this.score <= 150) {
             this.message = 'Amazing! You should be a judge - that\'s a perfect dish!';
         }
-
+        
         if(this.roundNumber === 2 && this.score < 200){
             this.message = 'You need to step it up if you\'re going to stay in this kitchen!! On to the last round!';
 
         } else if(this.roundNumber === 2 && this.score < 250) {
             this.message = 'Fair... OK... Boring!! But good enough to move on to the next round!';
-
+            
         } else if(this.roundNumber === 2 && this.score <= 300) {
             this.message = 'Are you sure you aren\'t a professional? This dish is fantastic! Now go take on the final round!';
         }
-
+        
         if(this.roundNumber === 3 && this.score < 350) {
             this.message = 'Time for you to go home! I don\'t think you\re cut out for our Hall of Fame!';
             //pushes object into highScoreList array
@@ -65,7 +65,8 @@ class Transition {
                 playerName: this.playerName,
                 score: this.score
             });
-            console.log(highScore);        }
+            console.log(highScore);       
+        }
         this.transitionMessage = dom.querySelector('h2');
         this.transitionMessage.textContent = this.message;
         return dom;
@@ -74,24 +75,6 @@ class Transition {
         while(this.messageContainer.lastElementChild) {
             this.messageContainer.lastElementChild.remove();
         }
-        this.transitionMessage.textContent = '';
+        this.transitionMessage.textContent = ''; 
     }
-}
-
-
-
-window.onbeforeunload = () => {
-    window.localStorage.setItem('highScore', JSON.stringify(highScore));
-};
-
-
-ResumeGame() {
-    //gets and stores user score
-    //gets and stores current round
-    //gets and stores player name
-    //gets and stores player avatar
-    document.cookie = "cookiename = userdata"
-
-    console.log(cookie);
-
 }

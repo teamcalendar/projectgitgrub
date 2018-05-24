@@ -1,17 +1,25 @@
 /* exported GameApp */
 /* globals PlayerDisplay, JudgeDisplay, RoundDisplay, Transition, ScoreDisplay */
-
 'use strict';
+
+window.onbeforeunload = () => {
+    window.localStorage.setItem('highScore', JSON.stringify(highScore));
+    userData 
+    window.localStorage.setItem('userData', JSON.stringify(userData));
+    
+};
+
+
 
 const userArray = window.localStorage.getItem('userData');
 const userArrayParse = JSON.parse(userArray);
 const chefSelect = userArrayParse[0];
 const playerName = userArrayParse[1];
+const roundNumber = userArrayParse[2];
+const score = userArrayParse[3];
 console.log('user array info:', userArrayParse);
 
 const appTemplate = document.getElementById('app-template');
-
-
 
 
 class GameApp {
@@ -28,10 +36,16 @@ class GameApp {
         console.log('3 seconds have passed', this.transitionComponent);
         this.transitionComponent.clearTransitionMessage();
         this.roundNumber ++;
+        userArrayParse[2] = this.roundNumber;
+        userArrayParse[3] = this.score;
         this.roundDisplayComponent.update(this.roundNumber);
     }
     
     render() {
+
+        userArrayParse[2] = this.roundNumber;
+        userArrayParse[3] = this.score;
+        
         const dom = appTemplate.content;
         
         document.body.style.backgroundImage = 'url(/images/Round1-bg.jpg)';
