@@ -1,5 +1,5 @@
 'use strict';
-/* exported clearHighScoresArray */
+/* exported highScoreData clearHighScoresArray */
 
 let highScoreData = window.localStorage.getItem('highScore');
 highScoreData = JSON.parse(highScoreData);
