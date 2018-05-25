@@ -9,8 +9,9 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/gameapp.css">
     <link rel="stylesheet" type="text/css" href="css/transition.css">
-    <title>Project GitGrub</title>
+    <title>Project GitGrub : Game Screen</title>
 </head>
+
 <body>
 
     
@@ -49,38 +50,38 @@
         <div id="ingredient"></div>
     </template>
 
-    <template id="ingredient-template">
-        <label><img class="individual-ingredient">
-        <input type="checkbox" style="display: none">
-        </label>
-    </template>
+        <template id="ingredient-template">
+            <label><img class="individual-ingredient">
+            <input type="checkbox" style="display: none">
+            </label>
+        </template>
 
-    <template id="transition-template">
-        <section>
-            <div id = "transition-message-container">
-                <div class="top-lights"></div>
-                <h2 class="transition-message"></h2>
-                <div class="bottom-lights"></div>       
+        <template id="transition-template">
+            <section>
+                <div id = "transition-message-container">
+                    <div class="top-lights"></div>
+                    <h2 class="transition-message"></h2>
+                    <div class="bottom-lights"></div>       
+                </div>
+            </section>
+        </template>
+        
+        <template id="score-display-template">
+            <div id="score-container">
+                <h3 class="style-score">Score:</h3>
+                <h2></h2>
             </div>
-        </section>
-    </template>
-    
-    <template id="score-display-template">
-        <div id="score-container">
-            <h3 class="style-score">Score:</h3>
-            <h2></h2>
-        </div>
-    </template>
+        </template>
 
-    <script src = "js/recipesList.js"></script>
-    <script src = "js/scoredisplay.js"></script>
-    <script src = "js/transitions.js"></script>
-    <script src = "js/Ingredient.js"></script>
-    <script src = "js/IngredientSelector.js"></script>
-    <script src = "js/RoundDisplay.js"></script>
-    <script src = "js/playerdisplay.js"></script>
-    <script src = "js/judgedisplay.js"></script>
-    <script src = "js/gameapp.js"></script>
-    <script src = "js/main.js"></script>
-</body>
+        <script src = "js/recipesList.js"></script>
+        <script src = "js/scoredisplay.js"></script>
+        <script src = "js/transitions.js"></script>
+        <script src = "js/Ingredient.js"></script>
+        <script src = "js/IngredientSelector.js"></script>
+        <script src = "js/RoundDisplay.js"></script>
+        <script src = "js/playerdisplay.js"></script>
+        <script src = "js/judgedisplay.js"></script>
+        <script src = "js/gameapp.js"></script>
+        <script src = "js/main.js"></script>
+    </body>
 </html>
