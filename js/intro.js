@@ -26,7 +26,7 @@ function playerNameSubmit(event) {
 
     if(userData[0] === 'image location'){
         event.preventDefault();
-        alert('Please choose a character.');
+        alert('Please click on a character.');
     }
     else {
         event.preventDefault();
