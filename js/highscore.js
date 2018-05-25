@@ -24,33 +24,37 @@ function bubbleSort(array, prop) {
     }
     return array;
 }
+function renderHighScores() {
+    const selectTableBody = document.querySelector('tbody');
+    
+    while(selectTableBody.lastElementChild) {
+        selectTableBody.lastElementChild.remove();
+    }
+    let highScoreData = window.localStorage.getItem('highScore');
+    highScoreData = JSON.parse(highScoreData);
+    
+    bubbleSort(highScoreData, 'score');
+    
+    for(var i = 0; i < highScoreData.length; i++) {
+        let tRow = document.createElement('tr');
+        selectTableBody.appendChild(tRow);
+        let child1 = document.createElement('td');
+        child1.textContent = highScoreData[i].playerName;
+        tRow.appendChild(child1);
+    
+        let child2 = document.createElement('td');
+        child2.classList = 'number-row';
+        child2.textContent = highScoreData[i].score;
+        tRow.appendChild(child2);
+    }
 
-bubbleSort(highScoreData, 'score');
-
-// render array items to table
-
-const selectTableBody = document.querySelector('tbody');
-
-for(var i = 0; i < highScoreData.length; i++) {
-    let tRow = document.createElement('tr');
-    selectTableBody.appendChild(tRow);
-    let child1 = document.createElement('td');
-    child1.textContent = highScoreData[i].playerName;
-    tRow.appendChild(child1);
-
-    let child2 = document.createElement('td');
-    child2.classList = 'number-row';
-    child2.textContent = highScoreData[i].score;
-    tRow.appendChild(child2);
 }
 
+renderHighScores();
 
 
 //reset high-scores function
 let clearHighScoresArray = function(){
-    //if we use the below method
-    //selectTableBody.remove(); 
-    //it does not clear the scores array, just the table
-    //when page is reloaded, score will come back, hence ->
-    highScoresArray = 0;
+    window.localStorage.removeItem('highScore');
+    renderHighScores();
 };
