@@ -3,7 +3,6 @@
 
 let highScoreData = window.localStorage.getItem('highScore');
 highScoreData = JSON.parse(highScoreData);
-console.log(highScoreData);
 
 
 
@@ -27,7 +26,6 @@ function bubbleSort(array, prop) {
 }
 
 bubbleSort(highScoreData, 'score');
-console.log(highScoreData);
 
 // render array items to table
 

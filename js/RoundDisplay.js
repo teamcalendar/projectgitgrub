@@ -30,7 +30,6 @@ class RoundDisplay {
         const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);
   
         this.itemSelectorSection.appendChild(itemSelectorComponent.render());
-        console.log('welcome to round', roundNumber);
         
         if(this.roundNumber === 2) {
             document.getElementById('root').style.backgroundImage = 'url(images/Round2-bg.jpg)';
