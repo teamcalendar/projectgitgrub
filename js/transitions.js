@@ -2,7 +2,14 @@
 
 'use strict';
 
-let highScore = [];
+
+const highScoreData = window.localStorage.getItem('highScore');
+let highScore = JSON.parse(highScoreData);
+
+if(!highScore) {
+    highScore = [];
+}
+
 
 
 const transitionTemplate = document.getElementById('transition-template');
