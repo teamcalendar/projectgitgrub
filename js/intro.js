@@ -12,13 +12,10 @@ userData[1] = 'user name';
 userData[2] = 1;
 userData[3] = 0;
 
-console.log('userArray', userData[0]);
-
 chefSelect.addEventListener('click', collectChefChoice);
 function collectChefChoice(event) {
     event.preventDefault();
     var playerChef = event.target.src;
-    console.log('chef file:', playerChef);
     userData.splice(0, 1, playerChef);
 }
 
@@ -35,8 +32,6 @@ function playerNameSubmit(event) {
         event.preventDefault();
         var userName = event.target.username.value;
         userData.splice(1, 1, userName);
-        console.log('username:', userName);
-        console.log(userData);
         window.location.replace('gameapp.html');
     }
 }

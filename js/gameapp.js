@@ -34,7 +34,6 @@ class GameApp {
 
         userArrayParse[2] = this.roundNumber;
         userArrayParse[3] = this.score;
-        console.log(userArrayParse);
         const dom = appTemplate.content;
         if(this.roundNumber === 1) {
             document.getElementById('root').style.backgroundImage = 'url(images/Round1-bg.jpg)';

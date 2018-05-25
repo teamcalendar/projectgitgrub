@@ -52,7 +52,6 @@ class IngredientSelectorDisplay {
                 if(statusChange === true) {
                     this.roundScore += ingredient.pointValue;
                     this.checkedIngredients++;
-                    console.log(ingredient.constructor.name, 'is selected');
                 } else {
                     this.roundScore -= ingredient.pointValue;
                     this.checkedIngredients--;

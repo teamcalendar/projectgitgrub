@@ -11,7 +11,6 @@ class ScoreDisplay {
     }
     update(score){
         this.score = score;
-        console.log('updating score to', this.score);
         this.scoreUpdateLocation.textContent = this.score;
     }
     render() {
