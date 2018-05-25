@@ -13,7 +13,8 @@ body {
 #about-title-box {
     display: block;
     max-width: 50%;  
-    margin: 40px auto;
+    margin: auto;
+    
 
 }
 
@@ -67,7 +68,7 @@ h2 {
     padding: 20px 10px 10px 10px;
     background: rgb(82, 161, 182);
 
-    height: 600px;
+    height: 500px;
     /* width: 280px; */
 }
 
@@ -76,8 +77,8 @@ h2 {
     padding: 8px;
 }
 
-.connect {
+.nav-container {
     display: block;
-    margin: 7px;
-    
+    max-width: 50%;  
+    margin: auto;
 }
