@@ -15,21 +15,21 @@ class RoundDisplay {
     }
 
     hideIngredients() {
-        console.log('hide');
+        const itemSelector = this.itemSelectorSection;
+        while(itemSelector.lastElementChild) {
+            itemSelector.lastElementChild.remove();
+        }
     }
 
     update(roundNumber){
         this.roundNumber = roundNumber;
 
-        const itemSelector = this.itemSelectorSection;
-        while(itemSelector.lastElementChild) {
-            itemSelector.lastElementChild.remove();
-        }
+        
 
         const recipe = pickRandomRecipe(this.recipeList[this.roundNumber - 1]);
         const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);
   
-        itemSelector.appendChild(itemSelectorComponent.render());
+        this.itemSelectorSection.appendChild(itemSelectorComponent.render());
         console.log('welcome to round', roundNumber);
         
         if(this.roundNumber === 2) {
