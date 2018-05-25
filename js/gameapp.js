@@ -68,12 +68,14 @@ class GameApp {
             window.setTimeout(() => {
                 this.transitionComponent.clearTransitionMessage();
                 if(this.roundNumber === 3){
-                    window.location.href = 'hiscores.html';
+                    window.location.replace('hiscores.html');
                 }
-                this.roundNumber++;
-                userArrayParse[2] = this.roundNumber;
-                userArrayParse[3] = this.score;
-                this.roundDisplayComponent.update(this.roundNumber);
+                else {
+                    this.roundNumber++;
+                    userArrayParse[2] = this.roundNumber;
+                    userArrayParse[3] = this.score;
+                    this.roundDisplayComponent.update(this.roundNumber);
+                }
             }, 4500);
         });
         roundDisplaySection.appendChild(this.roundDisplayComponent.render());
