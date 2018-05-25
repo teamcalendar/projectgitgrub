@@ -1,5 +1,6 @@
 /* exported highScoreList Transition  */
 /* globals userArrayParse */
+
 'use strict';
 
 
