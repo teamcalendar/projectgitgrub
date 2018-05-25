@@ -83,7 +83,10 @@ class GameApp {
         this.scoreDisplayComponent = new ScoreDisplay(this.score);
         scoreDisplaySection.appendChild(this.scoreDisplayComponent.render());
         
-        
+        const exitButton = dom.getElementById('exit-button');
+        exitButton.addEventListener('click', () => {
+            window.location.replace('index.html');
+        });
         
         return dom;
     }

@@ -52,6 +52,7 @@ class Transition {
         if(this.roundNumber === 3 && this.score < 350) {
             this.message = 'Time for you to go home! I don\'t think you\'re cut out for our Hall of Fame!';
             //pushes object into highScoreList array
+            window.localStorage.removeItem('userData');
             highScore.push({
                 playerName: this.playerName,
                 score: this.score
@@ -61,6 +62,7 @@ class Transition {
         } else if(this.roundNumber === 3 && this.score < 400) {
             this.message = 'You may not be the #1 score, but you did yourself proud! Great cooking skills!';
             //pushes object into highScoreList array
+            window.localStorage.removeItem('userData');
             highScore.push({
                 playerName: this.playerName,
                 score: this.score
@@ -69,6 +71,7 @@ class Transition {
         } else if(this.roundNumber === 3 && this.score <= 450) {
             this.message = 'You\'re among the greats! This dish is sure to put you in our Hall of Fame!';
             //pushes object into highScoreList array
+            window.localStorage.removeItem('userData');
             highScore.push({
                 playerName: this.playerName,
                 score: this.score
