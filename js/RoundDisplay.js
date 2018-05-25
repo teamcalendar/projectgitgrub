@@ -14,24 +14,28 @@ class RoundDisplay {
         this.onSubmit = onSubmit;
     }
 
-    update(roundNumber){
-        this.roundNumber = roundNumber;
-
+    hideIngredients() {
         const itemSelector = this.itemSelectorSection;
         while(itemSelector.lastElementChild) {
             itemSelector.lastElementChild.remove();
         }
+    }
+
+    update(roundNumber){
+        this.roundNumber = roundNumber;
+
+        
 
         const recipe = pickRandomRecipe(this.recipeList[this.roundNumber - 1]);
         const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);
   
-        itemSelector.appendChild(itemSelectorComponent.render());
+        this.itemSelectorSection.appendChild(itemSelectorComponent.render());
         console.log('welcome to round', roundNumber);
         
         if(this.roundNumber === 2) {
-            document.body.style.backgroundImage = 'url(images/Round2-bg.jpg)';
+            document.getElementById('root').style.backgroundImage = 'url(images/Round2-bg.jpg)';
         } else if(this.roundNumber === 3) {
-            document.body.style.backgroundImage = 'url(images/Round3-bg.jpg)';
+            document.getElementById('root').style.backgroundImage = 'url(images/Round3-bg.jpg)';
         }
     }
 

@@ -36,8 +36,14 @@ class GameApp {
         userArrayParse[3] = this.score;
         console.log(userArrayParse);
         const dom = appTemplate.content;
-        
-        document.body.style.backgroundImage = 'url(images/Round1-bg.jpg)';
+        if(this.roundNumber === 1) {
+            document.getElementById('root').style.backgroundImage = 'url(images/Round1-bg.jpg)';
+        }
+        else if(this.roundNumber === 2) {
+            document.getElementById('root').style.backgroundImage = 'url(images/Round2-bg.jpg)';
+        } else {
+            document.getElementById('root').style.backgroundImage = 'url(images/Round3-bg.jpg)';
+        }
         
 
         const playerDisplaySection = dom.getElementById('player-display');
@@ -56,7 +62,7 @@ class GameApp {
             this.score += roundScore;
             this.scoreDisplayComponent.update(this.score);
             this.judgeDisplayComponent.update(this.score);
-            
+            this.roundDisplayComponent.hideIngredients();
             this.transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
             transitionSection.appendChild(this.transitionComponent.render());
             
@@ -69,7 +75,7 @@ class GameApp {
                 userArrayParse[2] = this.roundNumber;
                 userArrayParse[3] = this.score;
                 this.roundDisplayComponent.update(this.roundNumber);
-            }, 3000);
+            }, 4500);
         });
         roundDisplaySection.appendChild(this.roundDisplayComponent.render());
         
@@ -77,7 +83,10 @@ class GameApp {
         this.scoreDisplayComponent = new ScoreDisplay(this.score);
         scoreDisplaySection.appendChild(this.scoreDisplayComponent.render());
         
-        
+        const exitButton = dom.getElementById('exit-button');
+        exitButton.addEventListener('click', () => {
+            window.location.replace('index.html');
+        });
         
         return dom;
     }

@@ -193,7 +193,7 @@ const omelet = new Recipe('Omelet',
         new Avocado(20)
     ]);
         
-const fullEnglish = new Recipe('Full English',
+const fullEnglish = new Recipe('Full English Breakfast',
     [
         new Egg(30),
         new Beans(30),
