@@ -1,5 +1,5 @@
 /* exported GameApp */
-/* globals PlayerDisplay, JudgeDisplay, RoundDisplay, Transition, ScoreDisplay */
+/* globals PlayerDisplay, highScore, JudgeDisplay, RoundDisplay, Transition, ScoreDisplay */
 'use strict';
 
 window.onbeforeunload = () => {
