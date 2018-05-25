@@ -1,5 +1,6 @@
 /* exported highScoreList Transition  */
-/* globals score */
+/* globals userArrayParse */
+
 'use strict';
 
 
@@ -52,28 +53,31 @@ class Transition {
         if(this.roundNumber === 3 && this.roundScore < 60) {
             this.message = 'Time for you to go home! I don\'t think you\'re cut out for our Hall of Fame!';
             //pushes object into highScoreList array
-            window.localStorage.removeItem('userData');
             highScore.push({
                 playerName: this.playerName,
                 score: this.score
             });
+            userArrayParse[2] = 1;
+            userArrayParse[3] = 0;
 
         } else if(this.roundNumber === 3 && this.roundScore < 100) {
             this.message = 'You may not be the #1 score, but you did yourself proud! Great cooking skills!';
             //pushes object into highScoreList array
-            window.localStorage.removeItem('userData');
             highScore.push({
                 playerName: this.playerName,
                 score: this.score
             });
+            userArrayParse[2] = 1;
+            userArrayParse[3] = 0;
         } else if(this.roundNumber === 3 && this.roundScore <= 150) {
             this.message = 'You\'re among the greats! This dish is sure to put you in our Hall of Fame!';
             //pushes object into highScoreList array
-            window.localStorage.removeItem('userData');
             highScore.push({
                 playerName: this.playerName,
                 score: this.score
             });
+            userArrayParse[2] = 1;
+            userArrayParse[3] = 0;
         }
         this.transitionMessage = dom.querySelector('h2');
         this.transitionMessage.textContent = this.message;
