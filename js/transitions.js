@@ -1,5 +1,5 @@
 /* exported highScoreList Transition  */
-
+/* globals score */
 'use strict';
 
 
@@ -88,6 +88,6 @@ class Transition {
         while(this.messageSection.lastElementChild) {
             this.messageSection.lastElementChild.remove();
         }
-        this.transitionMessage.textContent = ''; 
+        this.transitionMessage.textContent = '';
     }
 }
