@@ -151,9 +151,9 @@ h1.main-title {
 }
 
 #transition-message-container {
-    position: absolute;
-    margin: auto;
-    z-index: 10;
-    top: 0px;
-    left: 0px;
+    position: fixed;
+    z-index: 11;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
