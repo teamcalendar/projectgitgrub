@@ -62,7 +62,7 @@ class GameApp {
             this.scoreDisplayComponent.update(this.score);
             this.judgeDisplayComponent.update(this.score);
             this.roundDisplayComponent.hideIngredients();
-            this.transitionComponent = new Transition(this.roundNumber, this.score, this.playerName);
+            this.transitionComponent = new Transition(this.roundNumber, this.score, this.playerName, roundScore);
             transitionSection.appendChild(this.transitionComponent.render());
             
             window.setTimeout(() => {
