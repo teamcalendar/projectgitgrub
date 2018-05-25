@@ -1,5 +1,5 @@
-/* exported highScoreList Transition  */
-/* globals score */
+/* exported score highScoreList Transition  */
+
 'use strict';
 
 
