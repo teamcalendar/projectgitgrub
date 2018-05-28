@@ -8,8 +8,6 @@ window.onbeforeunload = () => {
     
 };
 
-
-
 const userArray = window.localStorage.getItem('userData');
 const userArrayParse = JSON.parse(userArray);
 const chefSelect = userArrayParse[0];
@@ -35,14 +33,19 @@ class GameApp {
         userArrayParse[2] = this.roundNumber;
         userArrayParse[3] = this.score;
         const dom = appTemplate.content;
-        if(this.roundNumber === 1) {
-            document.getElementById('root').style.backgroundImage = 'url(images/Round1-bg.jpg)';
-        }
-        else if(this.roundNumber === 2) {
-            document.getElementById('root').style.backgroundImage = 'url(images/Round2-bg.jpg)';
-        } else {
-            document.getElementById('root').style.backgroundImage = 'url(images/Round3-bg.jpg)';
-        }
+        // 1) Move needed elements into the app template, shouldn't be reaching outside of the template
+        // 2) Eliminate obvious duplication:
+        document.getElementById('root').style.backgroundImage = 'url(images/Round' + this.roundNumber + '-bg.jpg)';
+        // 3) It also looks like RoundDisplay has similar logic. Can you find single place?
+
+        // if(this.roundNumber === 1) {
+        //     document.getElementById('root').style.backgroundImage = 'url(images/Round1-bg.jpg)';
+        // }
+        // else if(this.roundNumber === 2) {
+        //     document.getElementById('root').style.backgroundImage = 'url(images/Round2-bg.jpg)';
+        // } else {
+        //     document.getElementById('root').style.backgroundImage = 'url(images/Round3-bg.jpg)';
+        // }
         
 
         const playerDisplaySection = dom.getElementById('player-display');

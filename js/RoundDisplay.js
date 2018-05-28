@@ -24,8 +24,6 @@ class RoundDisplay {
     update(roundNumber){
         this.roundNumber = roundNumber;
 
-        
-
         const recipe = pickRandomRecipe(this.recipeList[this.roundNumber - 1]);
         const itemSelectorComponent = new IngredientSelectorDisplay(recipe, this.onSubmit);
   

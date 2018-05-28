@@ -34,6 +34,8 @@ function renderHighScores() {
     
 
     bubbleSort(highScoreData, 'score');
+    // cool, but simpler to write:
+    highScoreData.sort((a, b) => a.score - b.score);
     
     //Loops through data and populates the table with it
     for(var i = 0; i < highScoreData.length; i++) {
