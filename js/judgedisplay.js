@@ -9,7 +9,6 @@ class JudgeDisplay {
     constructor(score) {
         this.score = score;
         this.judgeState = './images/Judge-default.png';
-
     }
 
     update(score) {
